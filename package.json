@@ -27,8 +27,8 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/hkvalvik/fontset"
   },
-  "homepage": "",
+  "homepage": "http://hkvalvik.github.io/fontset/",
   "dependencies": {}
 }
