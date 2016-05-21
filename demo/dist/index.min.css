@@ -462,7 +462,9 @@ th {
     .demo-nav {
       position: absolute;
       left: 0;
-      transform: translateX(-100%); } }
+      -webkit-transform: translateX(-100%);
+          -ms-transform: translateX(-100%);
+              transform: translateX(-100%); } }
   @media (min-width: 640px) {
     .demo-nav {
       float: left;
@@ -527,3 +529,5 @@ section > section:last-child {
   margin-bottom: 0 !important;
 }
 */
+
+/*# sourceMappingURL=index.min.css.map */
