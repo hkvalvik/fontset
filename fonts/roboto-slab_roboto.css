@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300|Roboto:100,300,400,500");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400,500");
 /* General */
 /* Responsive */
 /* Elements */
@@ -159,7 +159,7 @@
   margin-bottom: 1.75rem;
   font-family: "Roboto Slab", sans-serif;
   line-height: 1;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 2.75rem; }
   @media (max-width: 780px) {
     .fontset h1 {
@@ -173,7 +173,7 @@
   margin-bottom: 1.75rem;
   font-family: "Roboto Slab", sans-serif;
   line-height: 1.25;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 2rem; }
   @media (max-width: 780px) {
     .fontset h2 {
@@ -187,7 +187,7 @@
   margin-bottom: 1.75rem;
   font-family: "Roboto Slab", sans-serif;
   line-height: 1.25;
-  font-weight: 100;
+  font-weight: 400;
   font-size: 1.75rem; }
   @media (max-width: 780px) {
     .fontset h3 {
@@ -201,7 +201,7 @@
   margin-bottom: 1.75rem;
   font-family: "Roboto Slab", sans-serif;
   line-height: 1.25;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.5rem; }
   @media (max-width: 780px) {
     .fontset h4 {
@@ -215,7 +215,7 @@
   margin-bottom: 1.75rem;
   font-family: "Roboto Slab", sans-serif;
   line-height: 1.25;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.25rem; }
   @media (max-width: 780px) {
     .fontset h5 {
@@ -409,7 +409,7 @@
 .fontset caption {
   font-family: "Roboto Slab", sans-serif;
   line-height: 1.25;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1rem;
   text-align: left; }
   @media (max-width: 780px) {

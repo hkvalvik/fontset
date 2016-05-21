@@ -28,7 +28,7 @@
   margin-bottom: 1.75rem;
   font-family: "Cabin Sketch", cursive;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   font-size: 0.875rem; }
   @media (max-width: 780px) {
@@ -40,7 +40,7 @@
   margin-bottom: 1.75rem;
   font-family: "Cabin Sketch", cursive;
   line-height: 1.75;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1rem;
   margin-left: 0;
   margin-right: 0;
@@ -56,7 +56,7 @@
 .fontset button {
   font-family: "Cabin Sketch", cursive;
   line-height: 1.25;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 1rem;
   padding: 0.625em 1.25em;
   border: none 0;
@@ -84,7 +84,7 @@
   margin-bottom: 1.75rem;
   font-family: "Cabin Sketch", cursive;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 1rem;
   cursor: pointer; }
   @media (max-width: 780px) {
@@ -114,7 +114,7 @@
 .fontset dt {
   font-family: "Cabin Sketch", cursive;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 1rem; }
   @media (max-width: 780px) {
     .fontset dt {
@@ -123,7 +123,7 @@
 .fontset dd {
   font-family: "Cabin Sketch", cursive;
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1rem;
   padding-left: 28px; }
   @media (max-width: 780px) {
@@ -151,7 +151,7 @@
 .fontset figcaption {
   font-family: "Cabin Sketch", cursive;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 0.875rem; }
 
 .fontset h1 {
@@ -173,7 +173,7 @@
   margin-bottom: 1.75rem;
   font-family: "Cabin Sketch", cursive;
   line-height: 1.25;
-  font-weight: 300;
+  font-weight: bold;
   font-size: 2rem; }
   @media (max-width: 780px) {
     .fontset h2 {
@@ -187,7 +187,7 @@
   margin-bottom: 1.75rem;
   font-family: "Cabin Sketch", cursive;
   line-height: 1.25;
-  font-weight: 100;
+  font-weight: bold;
   font-size: 1.75rem; }
   @media (max-width: 780px) {
     .fontset h3 {
@@ -201,7 +201,7 @@
   margin-bottom: 1.75rem;
   font-family: "Cabin Sketch", cursive;
   line-height: 1.25;
-  font-weight: 300;
+  font-weight: bold;
   font-size: 1.5rem; }
   @media (max-width: 780px) {
     .fontset h4 {
@@ -215,7 +215,7 @@
   margin-bottom: 1.75rem;
   font-family: "Cabin Sketch", cursive;
   line-height: 1.25;
-  font-weight: 300;
+  font-weight: bold;
   font-size: 1.25rem; }
   @media (max-width: 780px) {
     .fontset h5 {
@@ -229,7 +229,7 @@
   margin-bottom: 1.75rem;
   font-family: "Cabin Sketch", cursive;
   line-height: 1.25;
-  font-weight: 400;
+  font-weight: bold;
   font-size: 1rem; }
   @media (max-width: 780px) {
     .fontset h6 {
@@ -317,7 +317,7 @@
 .fontset li {
   font-family: "Cabin Sketch", cursive;
   line-height: 1.25;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1rem;
   margin-bottom: 0.75rem;
   padding-left: 14px; }
@@ -333,7 +333,7 @@
   margin-bottom: 1.75rem;
   font-family: "Cabin Sketch", cursive;
   line-height: 1.25;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 1rem; }
   @media (max-width: 780px) {
     .fontset nav {
@@ -349,7 +349,7 @@
   .fontset nav a {
     font-family: "Cabin Sketch", cursive;
     line-height: 1.25;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 1rem;
     text-decoration: none;
     display: block;
@@ -365,7 +365,7 @@
   margin-bottom: 1.75rem;
   font-family: "Cabin Sketch", cursive;
   line-height: 1.75;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1rem; }
   @media (max-width: 780px) {
     .fontset p {
@@ -409,7 +409,7 @@
 .fontset caption {
   font-family: "Cabin Sketch", cursive;
   line-height: 1.25;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 1rem;
   text-align: left; }
   @media (max-width: 780px) {
@@ -425,7 +425,7 @@
 .fontset th {
   font-family: "Cabin Sketch", cursive;
   line-height: 1.25;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 1rem; }
   @media (max-width: 780px) {
     .fontset th {
@@ -434,5 +434,5 @@
 .fontset td {
   font-family: "Cabin Sketch", cursive;
   line-height: 1.25;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.875rem; }

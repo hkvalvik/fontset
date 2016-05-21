@@ -4,8 +4,11 @@
 
 // Font families
 
-$fontset-family-primary: null !default;
-$fontset-family-secondary: $fontset-family-primary !default;
+$fontset-primary-family: null !default;
+$fontset-primary-weight: bold !default;
+$fontset-secondary-family: $fontset-primary-family !default;
+$fontset-secondary-weight: normal !default;
+$fontset-secondary-weight-bold: bold !default;
 $fontset-family-monospace: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace !default;
 
 
@@ -65,40 +68,40 @@ $fontset-max-vw: 1380 !default;
 
 $fontset-elements: (
 
-// html-    font-                      font-      line-   font-   font-
-// element  family                     size       height  weight  style
+// html-    font-                      font-      line-   font-                          font-
+// element  family                     size       height  weight                         style
 
-a:          null                       null       null    null    null,
-abbr:       null                       null       null    null    null,
-address:    $fontset-family-secondary  14         1.5     400     normal,
-blockquote: $fontset-family-secondary (14, 16)    1.75    300     null,
-button:     $fontset-family-secondary (14, 16)    1.25    400     null,
-dt:         $fontset-family-secondary (14, 16)    1.5     400     null,
-dd:         $fontset-family-secondary (14, 16)    1.5     300     null,
-figcaption: $fontset-family-secondary  14         1.5     400     null,
-h1:         $fontset-family-primary   (30, 44)    1       bold    null,
-h2:         $fontset-family-primary   (22, 32)    1.25    300     null,
-h3:         $fontset-family-primary   (18, 28)    1.25    100     null,
-h4:         $fontset-family-primary   (16, 24)    1.25    300     null,
-h5:         $fontset-family-primary   (14, 20)    1.25    300     null,
-h6:         $fontset-family-primary   (12, 16)    1.25    400     null,
-b:          null                       null       null    bolder  null,
-cite:       null                       null       null    null    italic,
-code:       $fontset-family-monospace  null       null    null    null,
-del:        null                       null       null    null    null,
-em:         null                       null       null    null    italic,
-i:          null                       null       null    null    italic,
-ins:        null                       null       null    null    null,
-mark:       null                       null       null    null    null,
-nav:        $fontset-family-secondary (14, 16)    1.25    400     null,
-strong:     null                       null       null    bolder  null,
-summary:    $fontset-family-secondary (14, 16)    1.5     400     null,
-li:         $fontset-family-secondary (14, 16)    1.25    300     null,
-p:          $fontset-family-secondary (14, 16)    1.75    300     null,
-pre:        $fontset-family-monospace  14         1.5     null    null,
-caption:    $fontset-family-primary   (14, 16)    1.25    500     null,
-th:         $fontset-family-secondary (14, 16)    1.25    400     null,
-td:         $fontset-family-secondary  14         1.25    300     null
+a:          null                       null       null    null                           null,
+abbr:       null                       null       null    null                           null,
+address:    $fontset-secondary-family  14         1.5     $fontset-secondary-weight-bold normal,
+blockquote: $fontset-secondary-family (14, 16)    1.75    $fontset-secondary-weight      null,
+button:     $fontset-secondary-family (14, 16)    1.25    $fontset-secondary-weight-bold null,
+dt:         $fontset-secondary-family (14, 16)    1.5     $fontset-secondary-weight-bold null,
+dd:         $fontset-secondary-family (14, 16)    1.5     $fontset-secondary-weight      null,
+figcaption: $fontset-secondary-family  14         1.5     $fontset-secondary-weight-bold null,
+h1:         $fontset-primary-family   (30, 44)    1       $fontset-primary-weight        null,
+h2:         $fontset-primary-family   (22, 32)    1.25    $fontset-primary-weight        null,
+h3:         $fontset-primary-family   (18, 28)    1.25    $fontset-primary-weight        null,
+h4:         $fontset-primary-family   (16, 24)    1.25    $fontset-primary-weight        null,
+h5:         $fontset-primary-family   (14, 20)    1.25    $fontset-primary-weight        null,
+h6:         $fontset-primary-family   (12, 16)    1.25    $fontset-primary-weight        null,
+b:          null                       null       null    bolder                         null,
+cite:       null                       null       null    null                           italic,
+code:       $fontset-family-monospace  null       null    null                           null,
+del:        null                       null       null    null                           null,
+em:         null                       null       null    null                           italic,
+i:          null                       null       null    null                           italic,
+ins:        null                       null       null    null                           null,
+mark:       null                       null       null    null                           null,
+nav:        $fontset-secondary-family (14, 16)    1.25    $fontset-secondary-weight-bold null,
+strong:     null                       null       null    bolder                         null,
+summary:    $fontset-secondary-family (14, 16)    1.5     $fontset-secondary-weight-bold null,
+li:         $fontset-secondary-family (14, 16)    1.25    $fontset-secondary-weight      null,
+p:          $fontset-secondary-family (14, 16)    1.75    $fontset-secondary-weight      null,
+pre:        $fontset-family-monospace  14         1.5     null                           null,
+caption:    $fontset-primary-family   (14, 16)    1.25    $fontset-primary-weight        null,
+th:         $fontset-secondary-family (14, 16)    1.25    $fontset-secondary-weight-bold null,
+td:         $fontset-secondary-family  14         1.25    $fontset-secondary-weight      null
 ) !default;
 
 // a

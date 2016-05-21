@@ -16,7 +16,7 @@ module.exports = function(gulp){
             .pipe(
                 handlebars({
                         fonts: FONTS,
-                        selectedFont: FONTS[4],
+                        selectedFont: FONTS[3],
                         fontsPath: 'fonts',
                         screenshotsPath: 'demo/dist/screenshots',
                         exampleIncludePath: 'node_modules/fontset',

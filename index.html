@@ -6,7 +6,7 @@
     <script>
         function init(){
             new Demo.StyleSheet(document, {
-                stylesheets: 'amatic-sc,cabin-sketch,open-sans,roboto-slab,roboto-slab_roboto,roboto'.split(',')
+                stylesheets: 'cabin-sketch,open-sans,roboto-slab,roboto-slab_roboto,roboto'.split(',')
             });
             new Demo.TextToggle(document, {});
             new Demo.Nav(document.querySelector('[data-demo-nav]'), {
@@ -45,9 +45,6 @@
                     </strong>
                 </p>
                 <div class="demo-font-list">
-                        <button onclick="document.location.href = '#font=amatic-sc'">
-                            <img src="demo/dist/screenshots/amatic-sc.png" alt="amatic-sc" />
-                        </button>
                         <button onclick="document.location.href = '#font=cabin-sketch'">
                             <img src="demo/dist/screenshots/cabin-sketch.png" alt="cabin-sketch" />
                         </button>
@@ -92,8 +89,11 @@
 
 <span class="hljs-comment">// Font families</span>
 
-<span class="hljs-variable">$fontset-family-primary</span>: null !default;
-<span class="hljs-variable">$fontset-family-secondary</span>: <span class="hljs-variable">$fontset-family-primary</span> !default;
+<span class="hljs-variable">$fontset-primary-family</span>: null !default;
+<span class="hljs-variable">$fontset-primary-weight</span>: bold !default;
+<span class="hljs-variable">$fontset-secondary-family</span>: <span class="hljs-variable">$fontset-primary-family</span> !default;
+<span class="hljs-variable">$fontset-secondary-weight</span>: normal !default;
+<span class="hljs-variable">$fontset-secondary-weight-bold</span>: bold !default;
 <span class="hljs-variable">$fontset-family-monospace</span>: <span class="hljs-string">"Lucida Sans Typewriter"</span>, <span class="hljs-string">"Lucida Console"</span>, monaco, <span class="hljs-string">"Bitstream Vera Sans Mono"</span>, monospace !default;
 
 
@@ -153,40 +153,40 @@
 
 <span class="hljs-variable">$fontset-elements</span>: (
 
-// html-    font-                      font-      line-   font-   font-
-// element  family                     size       height  weight  style
+// html-    font-                      font-      line-   font-                          font-
+// element  family                     size       height  weight                         style
 
-a:          null                       null       null    null    null,
-abbr:       null                       null       null    null    null,
-address:    <span class="hljs-variable">$fontset-family-secondary</span>  <span class="hljs-number">14</span>         <span class="hljs-number">1.5</span>     <span class="hljs-number">400</span>     normal,
-blockquote: <span class="hljs-variable">$fontset-family-secondary</span> (<span class="hljs-number">14</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.75</span>    <span class="hljs-number">300</span>     null,
-button:     <span class="hljs-variable">$fontset-family-secondary</span> (<span class="hljs-number">14</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.25</span>    <span class="hljs-number">400</span>     null,
-dt:         <span class="hljs-variable">$fontset-family-secondary</span> (<span class="hljs-number">14</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.5</span>     <span class="hljs-number">400</span>     null,
-dd:         <span class="hljs-variable">$fontset-family-secondary</span> (<span class="hljs-number">14</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.5</span>     <span class="hljs-number">300</span>     null,
-figcaption: <span class="hljs-variable">$fontset-family-secondary</span>  <span class="hljs-number">14</span>         <span class="hljs-number">1.5</span>     <span class="hljs-number">400</span>     null,
-h1:         <span class="hljs-variable">$fontset-family-primary</span>   (<span class="hljs-number">30</span>, <span class="hljs-number">44</span>)    <span class="hljs-number">1</span>       bold    null,
-h2:         <span class="hljs-variable">$fontset-family-primary</span>   (<span class="hljs-number">22</span>, <span class="hljs-number">32</span>)    <span class="hljs-number">1.25</span>    <span class="hljs-number">300</span>     null,
-h3:         <span class="hljs-variable">$fontset-family-primary</span>   (<span class="hljs-number">18</span>, <span class="hljs-number">28</span>)    <span class="hljs-number">1.25</span>    <span class="hljs-number">100</span>     null,
-h4:         <span class="hljs-variable">$fontset-family-primary</span>   (<span class="hljs-number">16</span>, <span class="hljs-number">24</span>)    <span class="hljs-number">1.25</span>    <span class="hljs-number">300</span>     null,
-h5:         <span class="hljs-variable">$fontset-family-primary</span>   (<span class="hljs-number">14</span>, <span class="hljs-number">20</span>)    <span class="hljs-number">1.25</span>    <span class="hljs-number">300</span>     null,
-h6:         <span class="hljs-variable">$fontset-family-primary</span>   (<span class="hljs-number">12</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.25</span>    <span class="hljs-number">400</span>     null,
-b:          null                       null       null    bolder  null,
-cite:       null                       null       null    null    italic,
-code:       <span class="hljs-variable">$fontset-family-monospace</span>  null       null    null    null,
-del:        null                       null       null    null    null,
-em:         null                       null       null    null    italic,
-i:          null                       null       null    null    italic,
-ins:        null                       null       null    null    null,
-mark:       null                       null       null    null    null,
-nav:        <span class="hljs-variable">$fontset-family-secondary</span> (<span class="hljs-number">14</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.25</span>    <span class="hljs-number">400</span>     null,
-strong:     null                       null       null    bolder  null,
-summary:    <span class="hljs-variable">$fontset-family-secondary</span> (<span class="hljs-number">14</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.5</span>     <span class="hljs-number">400</span>     null,
-li:         <span class="hljs-variable">$fontset-family-secondary</span> (<span class="hljs-number">14</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.25</span>    <span class="hljs-number">300</span>     null,
-p:          <span class="hljs-variable">$fontset-family-secondary</span> (<span class="hljs-number">14</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.75</span>    <span class="hljs-number">300</span>     null,
-pre:        <span class="hljs-variable">$fontset-family-monospace</span>  <span class="hljs-number">14</span>         <span class="hljs-number">1.5</span>     null    null,
-caption:    <span class="hljs-variable">$fontset-family-primary</span>   (<span class="hljs-number">14</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.25</span>    <span class="hljs-number">500</span>     null,
-th:         <span class="hljs-variable">$fontset-family-secondary</span> (<span class="hljs-number">14</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.25</span>    <span class="hljs-number">400</span>     null,
-td:         <span class="hljs-variable">$fontset-family-secondary</span>  <span class="hljs-number">14</span>         <span class="hljs-number">1.25</span>    <span class="hljs-number">300</span>     null
+a:          null                       null       null    null                           null,
+abbr:       null                       null       null    null                           null,
+address:    <span class="hljs-variable">$fontset-secondary-family</span>  <span class="hljs-number">14</span>         <span class="hljs-number">1.5</span>     <span class="hljs-variable">$fontset-secondary-weight-bold</span> normal,
+blockquote: <span class="hljs-variable">$fontset-secondary-family</span> (<span class="hljs-number">14</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.75</span>    <span class="hljs-variable">$fontset-secondary-weight</span>      null,
+button:     <span class="hljs-variable">$fontset-secondary-family</span> (<span class="hljs-number">14</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.25</span>    <span class="hljs-variable">$fontset-secondary-weight-bold</span> null,
+dt:         <span class="hljs-variable">$fontset-secondary-family</span> (<span class="hljs-number">14</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.5</span>     <span class="hljs-variable">$fontset-secondary-weight-bold</span> null,
+dd:         <span class="hljs-variable">$fontset-secondary-family</span> (<span class="hljs-number">14</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.5</span>     <span class="hljs-variable">$fontset-secondary-weight</span>      null,
+figcaption: <span class="hljs-variable">$fontset-secondary-family</span>  <span class="hljs-number">14</span>         <span class="hljs-number">1.5</span>     <span class="hljs-variable">$fontset-secondary-weight-bold</span> null,
+h1:         <span class="hljs-variable">$fontset-primary-family</span>   (<span class="hljs-number">30</span>, <span class="hljs-number">44</span>)    <span class="hljs-number">1</span>       <span class="hljs-variable">$fontset-primary-weight</span>        null,
+h2:         <span class="hljs-variable">$fontset-primary-family</span>   (<span class="hljs-number">22</span>, <span class="hljs-number">32</span>)    <span class="hljs-number">1.25</span>    <span class="hljs-variable">$fontset-primary-weight</span>        null,
+h3:         <span class="hljs-variable">$fontset-primary-family</span>   (<span class="hljs-number">18</span>, <span class="hljs-number">28</span>)    <span class="hljs-number">1.25</span>    <span class="hljs-variable">$fontset-primary-weight</span>        null,
+h4:         <span class="hljs-variable">$fontset-primary-family</span>   (<span class="hljs-number">16</span>, <span class="hljs-number">24</span>)    <span class="hljs-number">1.25</span>    <span class="hljs-variable">$fontset-primary-weight</span>        null,
+h5:         <span class="hljs-variable">$fontset-primary-family</span>   (<span class="hljs-number">14</span>, <span class="hljs-number">20</span>)    <span class="hljs-number">1.25</span>    <span class="hljs-variable">$fontset-primary-weight</span>        null,
+h6:         <span class="hljs-variable">$fontset-primary-family</span>   (<span class="hljs-number">12</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.25</span>    <span class="hljs-variable">$fontset-primary-weight</span>        null,
+b:          null                       null       null    bolder                         null,
+cite:       null                       null       null    null                           italic,
+code:       <span class="hljs-variable">$fontset-family-monospace</span>  null       null    null                           null,
+del:        null                       null       null    null                           null,
+em:         null                       null       null    null                           italic,
+i:          null                       null       null    null                           italic,
+ins:        null                       null       null    null                           null,
+mark:       null                       null       null    null                           null,
+nav:        <span class="hljs-variable">$fontset-secondary-family</span> (<span class="hljs-number">14</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.25</span>    <span class="hljs-variable">$fontset-secondary-weight-bold</span> null,
+strong:     null                       null       null    bolder                         null,
+summary:    <span class="hljs-variable">$fontset-secondary-family</span> (<span class="hljs-number">14</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.5</span>     <span class="hljs-variable">$fontset-secondary-weight-bold</span> null,
+li:         <span class="hljs-variable">$fontset-secondary-family</span> (<span class="hljs-number">14</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.25</span>    <span class="hljs-variable">$fontset-secondary-weight</span>      null,
+p:          <span class="hljs-variable">$fontset-secondary-family</span> (<span class="hljs-number">14</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.75</span>    <span class="hljs-variable">$fontset-secondary-weight</span>      null,
+pre:        <span class="hljs-variable">$fontset-family-monospace</span>  <span class="hljs-number">14</span>         <span class="hljs-number">1.5</span>     null                           null,
+caption:    <span class="hljs-variable">$fontset-primary-family</span>   (<span class="hljs-number">14</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.25</span>    <span class="hljs-variable">$fontset-primary-weight</span>        null,
+th:         <span class="hljs-variable">$fontset-secondary-family</span> (<span class="hljs-number">14</span>, <span class="hljs-number">16</span>)    <span class="hljs-number">1.25</span>    <span class="hljs-variable">$fontset-secondary-weight-bold</span> null,
+td:         <span class="hljs-variable">$fontset-secondary-family</span>  <span class="hljs-number">14</span>         <span class="hljs-number">1.25</span>    <span class="hljs-variable">$fontset-secondary-weight</span>      null
 ) !default;
 
 <span class="hljs-comment">// a</span>

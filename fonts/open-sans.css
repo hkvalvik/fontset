@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 /* General */
 /* Responsive */
 /* Elements */
@@ -28,7 +28,7 @@
   margin-bottom: 1.75rem;
   font-family: "Open Sans", sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
   font-size: 0.875rem; }
   @media (max-width: 780px) {
@@ -56,7 +56,7 @@
 .fontset button {
   font-family: "Open Sans", sans-serif;
   line-height: 1.25;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1rem;
   padding: 0.625em 1.25em;
   border: none 0;
@@ -84,7 +84,7 @@
   margin-bottom: 1.75rem;
   font-family: "Open Sans", sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1rem;
   cursor: pointer; }
   @media (max-width: 780px) {
@@ -114,7 +114,7 @@
 .fontset dt {
   font-family: "Open Sans", sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1rem; }
   @media (max-width: 780px) {
     .fontset dt {
@@ -151,7 +151,7 @@
 .fontset figcaption {
   font-family: "Open Sans", sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 0.875rem; }
 
 .fontset h1 {
@@ -159,7 +159,7 @@
   margin-bottom: 1.75rem;
   font-family: "Open Sans", sans-serif;
   line-height: 1;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 2.75rem; }
   @media (max-width: 780px) {
     .fontset h1 {
@@ -173,7 +173,7 @@
   margin-bottom: 1.75rem;
   font-family: "Open Sans", sans-serif;
   line-height: 1.25;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 2rem; }
   @media (max-width: 780px) {
     .fontset h2 {
@@ -187,7 +187,7 @@
   margin-bottom: 1.75rem;
   font-family: "Open Sans", sans-serif;
   line-height: 1.25;
-  font-weight: 100;
+  font-weight: 400;
   font-size: 1.75rem; }
   @media (max-width: 780px) {
     .fontset h3 {
@@ -201,7 +201,7 @@
   margin-bottom: 1.75rem;
   font-family: "Open Sans", sans-serif;
   line-height: 1.25;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.5rem; }
   @media (max-width: 780px) {
     .fontset h4 {
@@ -215,7 +215,7 @@
   margin-bottom: 1.75rem;
   font-family: "Open Sans", sans-serif;
   line-height: 1.25;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.25rem; }
   @media (max-width: 780px) {
     .fontset h5 {
@@ -333,7 +333,7 @@
   margin-bottom: 1.75rem;
   font-family: "Open Sans", sans-serif;
   line-height: 1.25;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1rem; }
   @media (max-width: 780px) {
     .fontset nav {
@@ -349,7 +349,7 @@
   .fontset nav a {
     font-family: "Open Sans", sans-serif;
     line-height: 1.25;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1rem;
     text-decoration: none;
     display: block;
@@ -409,7 +409,7 @@
 .fontset caption {
   font-family: "Open Sans", sans-serif;
   line-height: 1.25;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1rem;
   text-align: left; }
   @media (max-width: 780px) {
@@ -425,7 +425,7 @@
 .fontset th {
   font-family: "Open Sans", sans-serif;
   line-height: 1.25;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1rem; }
   @media (max-width: 780px) {
     .fontset th {
