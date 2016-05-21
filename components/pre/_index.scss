@@ -1,0 +1,10 @@
+@mixin fontset-html-pre {
+  pre {
+    @include fontset-block;
+    @include fontset-font(pre);
+    padding: $fontset-pre-padding;
+    overflow-x: auto;
+    background-color: $fontset-pre-background-color;
+    color: $fontset-pre-color;
+  }
+}

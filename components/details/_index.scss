@@ -1,0 +1,11 @@
+@mixin fontset-html-details {
+  details {
+    @include fontset-block;
+  }
+
+  summary {
+    @include fontset-block;
+    @include fontset-font(summary);
+    cursor: pointer;
+  }
+}

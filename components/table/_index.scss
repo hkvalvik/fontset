@@ -1,0 +1,38 @@
+@mixin fontset-html-table {
+
+  table {
+    @include fontset-block;
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+  }
+
+  caption,
+  th,
+  td {
+    @include fontset-size(padding-top, 8);
+    @include fontset-size(padding-right, 12);
+    @include fontset-size(padding-bottom, 8);
+    @include fontset-size(padding-left, 12);
+  }
+
+  caption {
+    @include fontset-font(caption);
+    text-align: left;
+  }
+
+  th,
+  td {
+    text-align: left;
+    vertical-align: top;
+    border: solid 1px $fontset-table-border-color;
+  }
+
+  th {
+    @include fontset-font(th);
+  }
+
+  td {
+    @include fontset-font(td);
+  }
+}

@@ -1,0 +1,7 @@
+@mixin fontset-html-img {
+  img {
+    @include fontset-block;
+    display: block;
+    max-width: 100%;
+  }
+}

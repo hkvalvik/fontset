@@ -1,0 +1,36 @@
+@mixin fontset-html-dl {
+  dl {
+    @include fontset-block;
+  }
+
+  dt,
+  dd {
+    text-align: left;
+    margin: 16px 0 0 0;
+    padding: 0;
+  }
+
+  dt:first-of-type,
+  dd:first-of-type {
+    margin-top: 0;
+  }
+
+  dt {
+    @include fontset-font(dt);
+  }
+
+  dd {
+    @include fontset-font(dd);
+    padding-left: $dl-indent;
+  }
+
+  dd + dd,
+  dt + dt,
+  dt + dd {
+    margin-top: 0;
+  }
+
+  dt + dt + dd {
+    margin-top: 0;
+  }
+}

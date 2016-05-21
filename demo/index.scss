@@ -1,0 +1,112 @@
+@import "../node_modules/normalize-scss/sass/normalize";
+@import "../settings";
+@import "shadow";
+
+@include normalize;
+
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+$max-width: 1200px;
+
+body {
+  //background-color: #fafafa;
+}
+
+.demo {
+  @include clearfix;
+  padding: 0 20px 52px 20px;
+  margin: 0 auto;
+  max-width: $max-width;
+  color: #303030;
+
+  select {
+    background: transparent;
+    border: solid 1px #fff;
+  }
+
+  &-header {
+    padding: 32px 0;
+  }
+
+  &-nav {
+    float: left;
+    width: 30%;
+    padding-right: 4em;
+  }
+
+  &-hljs-heading {
+    white-space: normal;
+    color: #444;
+    font-weight: bold;
+
+    &:before {
+      content: '// ';
+    }
+  }
+
+  .hljs {
+    padding: 1.25em .625em;
+    background: #f0f0f0;
+    color: inherit;
+  }
+}
+
+.demo-panel {
+  @include shadow-2dp;
+  padding: 12px 8px;
+}
+
+.demo-gulp-screenshot {
+  display: none;
+  white-space: nowrap;
+  font-size: 120px;
+  background-color: $fontset-color-primary;
+  color: $fontset-color-primary-contrast;
+}
+
+.demo-font-list {
+  @include clearfix;
+  margin-bottom: 32px;
+  font-size: 0;
+  line-height: 0;
+
+  button {
+    margin: 0 8px 8px 0;
+  }
+
+  img {
+    display: block;
+    margin: 0;
+    height: 32px;
+  }
+}
+
+main {
+  float: left;
+  width: 70%;
+}
+
+/*
+section {
+  margin-bottom: 2em;
+  padding: 2em 1em;
+  border: solid 1px #eee;
+  background-color: #fff;
+}
+
+section > section {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25), 0 1px 1px rgba(0, 0, 0, 0.25);
+  border: none 0;
+}
+
+section > section:last-child {
+  margin-bottom: 0 !important;
+}
+*/
+

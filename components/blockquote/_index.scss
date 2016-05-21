@@ -1,0 +1,10 @@
+@mixin fontset-html-blockquote {
+  blockquote {
+    @include fontset-block;
+    @include fontset-font(blockquote);
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 0 0 ($fontset-blockquote-indent - $fontset-blockquote-border-width);
+    border-left: solid $fontset-blockquote-border-color;
+  }
+}

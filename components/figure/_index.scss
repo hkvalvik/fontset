@@ -1,0 +1,13 @@
+@mixin fontset-html-figure {
+
+  figure {
+    @include fontset-block;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+
+  figcaption {
+    @include fontset-font(figcaption);
+  }
+}

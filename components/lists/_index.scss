@@ -1,0 +1,36 @@
+@mixin fontset-html-lists {
+  ol,
+  ul {
+    @include fontset-block;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 0 0 $fontset-list-indent;
+
+    ol,
+    ul {
+      margin-top: 12px;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  ol {
+    list-style: {
+      type: decimal;
+      position: outside;
+    };
+  }
+
+  ul {
+    list-style: {
+      type: disc;
+      position: outside;
+    };
+  }
+
+  li {
+    @include fontset-font(li);
+    @include fontset-size(margin-bottom, 8, 12);
+    padding-left: $fontset-list-indent/2;
+  }
+
+}

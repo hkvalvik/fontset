@@ -1,0 +1,32 @@
+@mixin fontset-html-headings {
+
+  h1 {
+    @include fontset-block;
+    @include fontset-font(h1);
+  }
+
+  h2 {
+    @include fontset-block;
+    @include fontset-font(h2);
+  }
+
+  h3 {
+    @include fontset-block;
+    @include fontset-font(h3);
+  }
+
+  h4 {
+    @include fontset-block;
+    @include fontset-font(h4);
+  }
+
+  h5 {
+    @include fontset-block;
+    @include fontset-font(h5);
+  }
+
+  h6 {
+    @include fontset-block;
+    @include fontset-font(h6);
+  }
+}

@@ -1,0 +1,51 @@
+@import "settings";
+@import "mixins/size";
+@import "mixins/block";
+@import "components/a/index";
+@import "components/address/index";
+@import "components/blockquote/index";
+@import "components/button/index";
+@import "components/dl/index";
+@import "components/details/index";
+@import "components/figure/index";
+@import "components/headings/index";
+@import "components/hr/index";
+@import "components/img/index";
+@import "components/inline/index";
+@import "components/lists/index";
+@import "components/nav/index";
+@import "components/p/index";
+@import "components/pre/index";
+@import "components/table/index";
+
+@mixin fontset {
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  @include fontset-html-a;
+  @include fontset-html-address;
+  @include fontset-html-blockquote;
+  @include fontset-html-button;
+  @include fontset-html-details;
+  @include fontset-html-dl;
+  @include fontset-html-figure;
+  @include fontset-html-headings;
+  @include fontset-html-hr;
+  @include fontset-html-img;
+  @include fontset-html-inline;
+  @include fontset-html-lists;
+  @include fontset-html-nav;
+  @include fontset-html-p;
+  @include fontset-html-pre;
+  @include fontset-html-table;
+}
+
+@if $fontset-selector {
+  #{$fontset-selector}{
+    @include fontset;
+  }
+}

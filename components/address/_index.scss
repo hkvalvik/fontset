@@ -1,0 +1,6 @@
+@mixin fontset-html-address {
+  address {
+    @include fontset-block;
+    @include fontset-font(address);
+  }
+}

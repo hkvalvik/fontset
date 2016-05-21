@@ -1,0 +1,132 @@
+<html>
+<head>
+    <link rel="stylesheet" href="node_modules/highlight.js/styles/default.css">
+    <link rel="stylesheet" data-demo-stylesheet href="/{{fontsPath}}/{{selectedFont}}.css" />
+    <link rel="stylesheet" href="demo/index.css">
+    <script src="demo/index.js"></script>
+    <script>
+        function init(){
+            new Demo.StyleSheet(document, {
+                stylesheets: '{{fonts}}'.split(',')
+            });
+            new Demo.TextToggle(document, {});
+            new Demo.Nav(document.querySelector('[data-demo-nav]'), {
+                sections: document.querySelectorAll('[data-demo-nav-sections] section')
+            });
+        }
+    </script>
+</head>
+<body onload="init()" class="fontset">
+    <div class="demo">
+
+        <a href="https://github.com/hkvalvik/fontset"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+
+        <header class="demo-header">
+
+        </header>
+        <div class="demo-nav">
+            <nav data-demo-nav></nav>
+            <button data-demo-text-toggle style="display: none">
+                More text
+            </button>
+        </div>
+        <main>
+            <h1 data-gulp-screenshot class="demo-gulp-screenshot">
+                <script>
+                    document.write(Demo.getFormattedFontName());
+                </script>
+            </h1>
+            <section>
+                <h1>
+                    Css <strong>font sets</strong>
+                </h1>
+                <p>
+                    <strong>
+                        Just add <abbr title="Hypertext Markup Language">HTML</abbr>!
+                    </strong>
+                </p>
+                <div class="demo-font-list">
+                    {{#each fonts}}
+                        <button onclick="document.location.href = '#font={{this}}'">
+                            <img src="{{../screenshotsPath}}/{{this}}.png" alt="{{this}}" />
+                        </button>
+                    {{/each}}
+                </div>
+                <section>
+                    <h2>Getting started</h2>
+                    <pre><code>npm install fontset --save</code></pre>
+                    <h3>
+                        <strong>scss</strong> example
+                    </h3>
+                    <pre><code>{{> example-scss}}</code></pre>
+                    <h2><strong>scss</strong> settings</h2>
+                    <details>
+                        <summary>See all default settings</summary>
+                        <p>
+                            Note: The syntax highlighting below is rendered using
+                            <a href="https://highlightjs.org" target="_blank">highlight.js</a>.
+                        </p>
+                        <pre class="hljs"><code>{{{settingsContent}}}</code></pre>
+                    </details>
+                    <h3>
+                        <strong>Vanilla css</strong> example
+                    </h3>
+                    <pre><code>{{> example-css}}</code></pre>
+                </section>
+            </section>
+            <hr>
+            <section data-demo-nav-sections>
+                <h2>Elements</h2>
+                <section data-demo-nav-section="Headings">
+                    {{> headings/index}}
+                </section>
+                <section>
+                    {{> p/index}}
+                </section>
+                <section>
+                    {{> a/index}}
+                </section>
+                <section>
+                    {{> button/index}}
+                </section>
+                <section>
+                    {{> hr/index}}
+                </section>
+                <section>
+                    {{> inline/index}}
+                </section>
+                <section>
+                    {{> blockquote/index}}
+                </section>
+                <section>
+                    {{> pre/index}}
+                </section>
+                <section>
+                    {{> figure/index}}
+                </section>
+                <section>
+                    {{> img/index}}
+                </section>
+                <section>
+                    {{> nav/index}}
+                </section>
+                <section>
+                    {{> table/index}}
+                </section>
+                <section>
+                    {{> lists/index}}
+                </section>
+                <section>
+                    {{> dl/index}}
+                </section>
+                <section>
+                    {{> address/index}}
+                </section>
+                <section>
+                    {{> details/index}}
+                </section>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

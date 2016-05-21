@@ -1,0 +1,27 @@
+$fontset-nav-indent: $fontset-indent;
+$fontset-nav-item-padding: .5em 0;
+
+@mixin fontset-html-nav {
+  nav {
+    @include fontset-block;
+    @include fontset-font(nav);
+
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    a {
+      @include fontset-font(nav);
+      text-decoration: none;
+      display: block;
+      padding: $fontset-nav-item-padding;
+    }
+
+    ul ul a {
+      padding-left: $fontset-nav-indent;
+    }
+  }
+}

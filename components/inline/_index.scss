@@ -1,0 +1,54 @@
+@mixin fontset-html-inline {
+
+  abbr {
+    @include fontset-font(abbr);
+
+    &[title]{
+      border-bottom: $fontset-abbr-border-bottom;
+      cursor: help;
+    }
+  }
+
+  b {
+    @include fontset-font(b);
+  }
+
+  cite {
+    @include fontset-font(cite);
+  }
+
+  code {
+    @include fontset-font(code);
+    color: $fontset-code-color;
+  }
+
+  pre code {
+    color: inherit;
+  }
+
+  del {
+    @include fontset-font(del);
+  }
+
+  em {
+    @include fontset-font(em);
+  }
+
+  i {
+    @include fontset-font(i);
+  }
+
+  ins {
+    @include fontset-font(ins);
+  }
+
+  mark {
+    @include fontset-font(mark);
+    background-color: $fontset-mark-background-color;
+    color: $fontset-mark-color;
+  }
+
+  strong {
+    @include fontset-font(strong);
+  }
+}

@@ -1,0 +1,29 @@
+@mixin fontset-html-a {
+  a {
+    @include fontset-font(a);
+    transition: $fontset-a-transition;
+
+    &:link {
+      color: $fontset-a-color-link;
+    }
+
+    &:visited {
+      color: $fontset-a-color-visited;
+    }
+
+    &:hover {
+      color: $fontset-a-color-hover;
+    }
+
+    &:focus {
+      color: $fontset-a-color-focus;
+      outline-color: currentColor;
+      outline-offset: 3px;
+    }
+
+    &:active {
+      color: $fontset-a-color-active;
+    }
+  }
+
+}

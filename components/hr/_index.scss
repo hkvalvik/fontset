@@ -1,0 +1,11 @@
+@mixin fontset-html-hr {
+  hr {
+    @include fontset-block;
+    border: {
+      top: none;
+      right: none;
+      bottom: solid 1px $fontset-hr-color;
+      left: none;
+    };
+  }
+}

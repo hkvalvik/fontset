@@ -1,0 +1,7 @@
+@mixin fontset-html-p {
+  p {
+    @include fontset-block;
+    @include fontset-font(p);
+  }
+}
+

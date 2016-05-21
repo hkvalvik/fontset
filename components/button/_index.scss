@@ -1,0 +1,19 @@
+@mixin fontset-html-button {
+  button {
+    @include fontset-font(button);
+    padding: $fontset-button-padding;
+    border: none 0;
+    color: $fontset-button-color;
+    background-color: $fontset-button-background-color;
+
+    &[disabled]{
+      color: $fontset-button-disabled-color;
+      background-color: $fontset-button-disabled-background-color;
+    }
+
+    &:focus {
+      outline-color: $fontset-button-background-color;
+      outline-offset: 3px;
+    }
+  }
+}
