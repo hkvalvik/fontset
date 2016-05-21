@@ -22,6 +22,7 @@
     "highlight.js": "^9.3.0",
     "normalize-scss": "^4.2.1",
     "pageres": "^4.1.2",
+    "sass-media-mixins": "^1.0.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },

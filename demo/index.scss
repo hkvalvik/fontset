@@ -1,4 +1,5 @@
 @import "../node_modules/normalize-scss/sass/normalize";
+@import "../node_modules/sass-media-mixins/index";
 @import "../settings";
 @import "shadow";
 
@@ -35,9 +36,16 @@ body {
   }
 
   &-nav {
-    float: left;
-    width: 30%;
-    padding-right: 4em;
+    @include media-small {
+      position: absolute;
+      left: 0;
+      transform: translateX(-100%);
+    }
+    @include media-medium-and-large {
+      float: left;
+      width: 30%;
+      padding-right: 4em;
+    }
   }
 
   &-hljs-heading {
@@ -83,13 +91,15 @@ body {
   img {
     display: block;
     margin: 0;
-    height: 32px;
+    max-height: 32px;
   }
 }
 
 main {
-  float: left;
-  width: 70%;
+  @include media-medium-and-large {
+    float: left;
+    width: 70%;
+  }
 }
 
 /*

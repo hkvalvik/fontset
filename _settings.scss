@@ -130,6 +130,7 @@ $fontset-button-color: $fontset-color-primary-contrast !default;
 $fontset-button-background-color: $fontset-color-primary !default;
 $fontset-button-disabled-color: #eee !default;
 $fontset-button-disabled-background-color: #ccc !default;
+$fontset-button-states: shadow !default;
 
 // code
 
@@ -161,6 +162,12 @@ $fontset-pre-color: $fontset-color-secondary-contrast !default;
 // table
 
 $fontset-table-border-color: $fontset-color-secondary !default;
+
+
+
+/* States */
+
+$fontset-states-shadow-transition: box-shadow .25s ease !default;
 
 
 

@@ -1,0 +1,16 @@
+@mixin fontset-states-shadow {
+  transition: $fontset-states-shadow-transition;
+
+  &:hover {
+    @include fontset-shadow(1);
+  }
+
+  &:focus {
+    @include fontset-shadow(2);
+    outline: none;
+  }
+
+  &:active {
+    @include fontset-shadow(3);
+  }
+}

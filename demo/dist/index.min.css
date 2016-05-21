@@ -77,6 +77,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 /* General */
 /* Responsive */
 /* Elements */
+/* States */
 /* Rendering */
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /**
@@ -457,10 +458,16 @@ th {
     border: solid 1px #fff; }
   .demo-header {
     padding: 32px 0; }
-  .demo-nav {
-    float: left;
-    width: 30%;
-    padding-right: 4em; }
+  @media (min-width: 0) and (max-width: 639px) {
+    .demo-nav {
+      position: absolute;
+      left: 0;
+      transform: translateX(-100%); } }
+  @media (min-width: 640px) {
+    .demo-nav {
+      float: left;
+      width: 30%;
+      padding-right: 4em; } }
   .demo-hljs-heading {
     white-space: normal;
     color: #444;
@@ -496,11 +503,12 @@ th {
   .demo-font-list img {
     display: block;
     margin: 0;
-    height: 32px; }
+    max-height: 32px; }
 
-main {
-  float: left;
-  width: 70%; }
+@media (min-width: 640px) {
+  main {
+    float: left;
+    width: 70%; } }
 
 /*
 section {

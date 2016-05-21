@@ -11,9 +11,8 @@
       background-color: $fontset-button-disabled-background-color;
     }
 
-    &:focus {
-      outline-color: $fontset-button-background-color;
-      outline-offset: 3px;
+    @if($fontset-button-states == shadow){
+      @include fontset-states-shadow;
     }
   }
 }

@@ -1,6 +1,8 @@
 @import "settings";
-@import "mixins/size";
 @import "mixins/block";
+@import "mixins/shadow";
+@import "mixins/size";
+@import "mixins/states";
 @import "components/a/index";
 @import "components/address/index";
 @import "components/blockquote/index";

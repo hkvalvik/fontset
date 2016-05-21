@@ -2,6 +2,7 @@
 /* General */
 /* Responsive */
 /* Elements */
+/* States */
 /* Rendering */
 .fontset *,
 .fontset *:before,
@@ -61,16 +62,21 @@
   padding: 0.625em 1.25em;
   border: none 0;
   color: #fff;
-  background-color: deeppink; }
+  background-color: deeppink;
+  transition: box-shadow 0.25s ease; }
   @media (max-width: 780px) {
     .fontset button {
       font-size: 0.875rem; } }
   .fontset button[disabled] {
     color: #eee;
     background-color: #ccc; }
+  .fontset button:hover {
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.21), 0 2px 2px 0 rgba(0, 0, 0, 0.105), 0 1px 5px 0 rgba(0, 0, 0, 0.105); }
   .fontset button:focus {
-    outline-color: deeppink;
-    outline-offset: 3px; }
+    box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.42), 0 2px 4px 0 rgba(0, 0, 0, 0.21), 0 1px 10px 0 rgba(0, 0, 0, 0.21);
+    outline: none; }
+  .fontset button:active {
+    box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.63), 0 2px 6px 0 rgba(0, 0, 0, 0.315), 0 1px 15px 0 rgba(0, 0, 0, 0.315); }
 
 .fontset details {
   margin-top: 0;
