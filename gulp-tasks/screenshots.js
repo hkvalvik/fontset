@@ -17,7 +17,7 @@ module.exports = function(gulp){
         });
 
         return pageres
-            .dest('dist/screenshots')
+            .dest('demo/dist/screenshots')
             .run()
             .then(() => console.log('done'));
     };

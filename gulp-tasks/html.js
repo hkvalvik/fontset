@@ -18,7 +18,7 @@ module.exports = function(gulp){
                         fonts: FONTS,
                         selectedFont: FONTS[4],
                         fontsPath: 'fonts',
-                        screenshotsPath: 'dist/screenshots',
+                        screenshotsPath: 'demo/dist/screenshots',
                         exampleIncludePath: 'node_modules/fontset',
                         settingsContent: settingsContent
                     },
