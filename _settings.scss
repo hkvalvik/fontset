@@ -12,7 +12,6 @@ $fontset-secondary-weight-bold: bold !default;
 $fontset-family-monospace: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace !default;
 
 
-
 // Colors
 
 $fontset-color-primary: deeppink !default;
@@ -30,20 +29,26 @@ $fontset-indent: 28px !default;
 
 /* Responsive */
 
-// Bottom margins for paragraphs, tables and other block elements.
-// $fontset-block-margin-bottom-min is used on narrow screens
-// $fontset-block-margin-bottom-max is used on wide screens
-
-$fontset-block-margin-bottom-min: 14 !default;
-$fontset-block-margin-bottom-max: 28 !default;
-
 
 
 // Responsive css units
 
+// The minimum and maximum width of the page content.
+// These values will prevent properties with vw units from getting too small or too large.
+
+$fontset-min-width: 320px !default;
+$fontset-max-width: 1200px !default;
+
+// Bottom margins for paragraphs, tables and other block elements.
+// The first value is rendered on screens narrower than $fontset-min-width
+// The second value is rendered on screens wider than $fontset-max-width
+
+$fontset-block-margin-bottom: 14 28 !default;
+
 // Valid units: px, rem, vw (experimental)
 
-$fontset-unit: rem !default;
+//$fontset-unit: rem !default;
+$fontset-unit: vw !default;
 
 // If $fontset-unit is rem, this media query will be used for scaling down
 // font-sizes, margins and other values on small screens.
@@ -56,52 +61,51 @@ $fontset-rem-base: 16 !default;
 // font-sizes, margins and other values on small screens.
 $fontset-breakpoint-px: "(max-width: 780px)" !default;
 
-// If $fontset-unit is vw (viewport width), $fontset-max-vw will prevent
-// font sizes from getting too large on screens wider than the given value.
-$fontset-max-vw: 1380 !default;
-
 
 
 /* Elements */
 
 // Font sizes containing two values will be scaled responsively.
+// Modular scale:
+//   Narrow screens: 16px, Minor Third 1.200
+//   Wide screens:   14px, Perfect fourth 1.333
 
 $fontset-elements: (
 
-// html-    font-                      font-      line-   font-                          font-
-// element  family                     size       height  weight                         style
+// html-    font-         font-         line-   font-             font-
+// element  family        size          height  weight            style
 
-a:          null                       null       null    null                           null,
-abbr:       null                       null       null    null                           null,
-address:    $fontset-secondary-family  14         1.5     $fontset-secondary-weight-bold normal,
-blockquote: $fontset-secondary-family (14, 16)    1.75    $fontset-secondary-weight      null,
-button:     $fontset-secondary-family (14, 16)    1.25    $fontset-secondary-weight-bold null,
-dt:         $fontset-secondary-family (14, 16)    1.5     $fontset-secondary-weight-bold null,
-dd:         $fontset-secondary-family (14, 16)    1.5     $fontset-secondary-weight      null,
-figcaption: $fontset-secondary-family  14         1.5     $fontset-secondary-weight-bold null,
-h1:         $fontset-primary-family   (30, 44)    1       $fontset-primary-weight        null,
-h2:         $fontset-primary-family   (22, 32)    1.25    $fontset-primary-weight        null,
-h3:         $fontset-primary-family   (18, 28)    1.25    $fontset-primary-weight        null,
-h4:         $fontset-primary-family   (16, 24)    1.25    $fontset-primary-weight        null,
-h5:         $fontset-primary-family   (14, 20)    1.25    $fontset-primary-weight        null,
-h6:         $fontset-primary-family   (12, 16)    1.25    $fontset-primary-weight        null,
-b:          null                       null       null    bolder                         null,
-cite:       null                       null       null    null                           italic,
-code:       $fontset-family-monospace  null       null    null                           null,
-del:        null                       null       null    null                           null,
-em:         null                       null       null    null                           italic,
-i:          null                       null       null    null                           italic,
-ins:        null                       null       null    null                           null,
-mark:       null                       null       null    null                           null,
-nav:        $fontset-secondary-family (14, 16)    1.25    $fontset-secondary-weight-bold null,
-strong:     null                       null       null    bolder                         null,
-summary:    $fontset-secondary-family (14, 16)    1.5     $fontset-secondary-weight-bold null,
-li:         $fontset-secondary-family (14, 16)    1.25    $fontset-secondary-weight      null,
-p:          $fontset-secondary-family (14, 16)    1.75    $fontset-secondary-weight      null,
-pre:        $fontset-family-monospace  14         1.5     null                           null,
-caption:    $fontset-primary-family   (14, 16)    1.25    $fontset-primary-weight        null,
-th:         $fontset-secondary-family (14, 16)    1.25    $fontset-secondary-weight-bold null,
-td:         $fontset-secondary-family  14         1.25    $fontset-secondary-weight      null
+a:          null          null          null    null              null,
+abbr:       null          null          null    null              null,
+address:    secondary     14            1.5     secondary-bold    normal,
+blockquote: secondary    (14,    16)    1.75    secondary         null,
+button:     secondary    (14,    16)    1.25    secondary-bold    null,
+dt:         secondary    (14,    16)    1.5     secondary-bold    null,
+dd:         secondary    (14,    16)    1.5     secondary         null,
+figcaption: secondary    (14,    14)    1.5     secondary-bold    null,
+h1:         primary      (29.03, 50.52) 1       primary           null,
+h2:         primary      (24.19, 37.9)  1.25    primary           null,
+h3:         primary      (20.16, 28.43) 1.25    primary           null,
+h4:         primary      (16.8,  21.33) 1.25    primary           null,
+h5:         primary      (14,    16)    1.25    primary           null,
+h6:         primary      (11.67, 12)    1.25    primary           null,
+b:          null          null          null    bolder            null,
+cite:       null          null          null    null              italic,
+code:       monospace     null          null    null              null,
+del:        null          null          null    null              null,
+em:         null          null          null    null              italic,
+i:          null          null          null    null              italic,
+ins:        null          null          null    null              null,
+mark:       null          null          null    null              null,
+nav:        secondary    (14,    16)    1.25    secondary-bold    null,
+strong:     null          null          null    bolder            null,
+summary:    secondary    (14,    16)    1.5     secondary-bold    null,
+li:         secondary    (14,    16)    1.25    secondary         null,
+p:          secondary    (14,    16)    1.75    secondary         null,
+pre:        monospace     14            1.5     null              null,
+caption:    primary      (14,    16)    1.25    primary           null,
+th:         secondary    (14,    16)    1.25    secondary-bold    null,
+td:         secondary     14            1.25    secondary         null
 ) !default;
 
 // a

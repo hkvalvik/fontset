@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700');
 $fontset-primary-family: 'Roboto Slab', sans-serif;
+$fontset-primary-weight: 400 700;
 $fontset-secondary-family: $fontset-primary-family;
+$fontset-secondary-weight: 300 400;
+$fontset-secondary-weight-bold: 400 700;
 @import "../index";

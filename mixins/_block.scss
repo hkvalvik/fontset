@@ -1,4 +1,4 @@
 @mixin fontset-block {
   margin-top: 0; // Reset browser defaults
-  @include fontset-size(margin-bottom, $fontset-block-margin-bottom-min, $fontset-block-margin-bottom-max)
+  @include fontset-size(margin-bottom, nth($fontset-block-margin-bottom, 1), nth($fontset-block-margin-bottom, 2));
 }

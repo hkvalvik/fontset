@@ -444,8 +444,10 @@ td,
 th {
   padding: 0; }
 
+body {
+  min-width: 320px; }
+
 .demo {
-  padding: 0 20px 52px 20px;
   margin: 0 auto;
   max-width: 1200px;
   color: #303030; }
@@ -453,6 +455,14 @@ th {
     content: '';
     display: table;
     clear: both; }
+  .demo {
+    padding: 0.75rem; }
+    @media screen and (min-width: 20rem) {
+      .demo {
+        padding: calc(0.75rem + 1.25 * (100vw - 20rem) / 55); } }
+    @media screen and (min-width: 75rem) {
+      .demo {
+        padding: 2rem; } }
   .demo select {
     background: transparent;
     border: solid 1px #fff; }
@@ -493,41 +503,43 @@ th {
   color: #fff; }
 
 .demo-font-list {
-  margin-bottom: 32px;
   font-size: 0;
   line-height: 0; }
   .demo-font-list:after {
     content: '';
     display: table;
     clear: both; }
+  .demo-font-list {
+    margin-bottom: 0.5rem; }
+    @media screen and (min-width: 20rem) {
+      .demo-font-list {
+        margin-bottom: calc(0.5rem + 1.5 * (100vw - 20rem) / 55); } }
+    @media screen and (min-width: 75rem) {
+      .demo-font-list {
+        margin-bottom: 2rem; } }
   .demo-font-list button {
-    margin: 0 8px 8px 0; }
+    margin: 0.03125rem; }
+    @media screen and (min-width: 20rem) {
+      .demo-font-list button {
+        margin: calc(0.03125rem + 0.09375 * (100vw - 20rem) / 55); } }
+    @media screen and (min-width: 75rem) {
+      .demo-font-list button {
+        margin: 0.125rem; } }
   .demo-font-list img {
     display: block;
-    margin: 0;
-    max-height: 32px; }
+    margin: 0; }
+    .demo-font-list img {
+      height: 1rem; }
+      @media screen and (min-width: 20rem) {
+        .demo-font-list img {
+          height: calc(1rem + 0.375 * (100vw - 20rem) / 55); } }
+      @media screen and (min-width: 75rem) {
+        .demo-font-list img {
+          height: 1.375rem; } }
 
 @media (min-width: 640px) {
   main {
     float: left;
     width: 70%; } }
-
-/*
-section {
-  margin-bottom: 2em;
-  padding: 2em 1em;
-  border: solid 1px #eee;
-  background-color: #fff;
-}
-
-section > section {
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25), 0 1px 1px rgba(0, 0, 0, 0.25);
-  border: none 0;
-}
-
-section > section:last-child {
-  margin-bottom: 0 !important;
-}
-*/
 
 /*# sourceMappingURL=index.min.css.map */

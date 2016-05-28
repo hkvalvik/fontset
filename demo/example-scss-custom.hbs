@@ -1,0 +1,17 @@
+// Import fonts with css @font-face or from a third party such as Google Fonts
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400,500');
+
+// Define font families and font weights
+
+$fontset-primary-family: 'Roboto Slab', sans-serif;
+$fontset-primary-weight: 400;
+$fontset-secondary-family: 'Roboto', sans-serif;
+$fontset-secondary-weight: 300;
+$fontset-secondary-weight-bold: 400;
+
+@import '{{exampleIncludePath}}/{{fontsPath}}/index.scss';
+
+.my-selector {
+    @include fontset;
+}

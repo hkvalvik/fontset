@@ -1,106 +1,14 @@
-@mixin fontset-vw($property, $value, $max: null) {
+@function fontset-rem($value){
+  @return fontset-strip-unit($value)/ $fontset-rem-base * 1rem;
+}
+
+@mixin fontset-size($property, $min, $max: null) {
   @if $max {
-    $min: $value;
-    $val: $max / $fontset-breakpoint-vw * 100;
-    #{$property}: #{$val}vw;
-
-    // Large screens
-
-    @media (min-width: $fontset-breakpoint-vw*1px) {
-      #{$property}: #{$max}px;
-    }
-
-    // Small screens
-
-    $max-width: ($min / $val) * 100;
-    $max-width: min($max-width, $fontset-breakpoint-vw);
-    @media (max-width: $max-width*1px) {
-      #{$property}: #{$min}px;
-    }
+    $min: fontset-rem($min);
+    $max: fontset-rem($max);
+    @include fontset-fluid($property, $min, $max);
   }
   @else {
-    #{$property}: #{$value}px;
-  }
-}
-
-@mixin fontset-px($property, $value, $max: null) {
-
-  @if $max {
-    #{$property}: #{$max}px;
-
-    @media #{$fontset-breakpoint-px} {
-      #{$property}: #{$value}px;
-    }
-  }
-  @else {
-    #{$property}: #{$value}px;
-  }
-}
-
-@mixin fontset-rem($property, $value, $max: null) {
-
-  @if $max {
-    #{$property}: #{$max / $fontset-rem-base}rem;
-
-    @media #{$fontset-breakpoint-rem} {
-      #{$property}: #{$value / $fontset-rem-base}rem;
-    }
-  }
-  @else {
-    #{$property}: #{$value / $fontset-rem-base}rem;
-  }
-}
-
-@mixin fontset-size($property, $value, $max: null) {
-  @if $fontset-unit == vw {
-    @include fontset-vw($property, $value, $max);
-  }
-  @else if $fontset-unit == px {
-    @include fontset-px($property, $value, $max);
-  }
-  @else if $fontset-unit == rem {
-    @include fontset-rem($property, $value, $max);
-  }
-  @else {
-    @error "Invalid unit";
-  }
-}
-
-@mixin fontset-font-size($range, $property: font-size) {
-  $min: null;
-  $max: null;
-  @if type-of($range) == list {
-    $min: nth($range, 1);
-    $max: nth($range, 2);
-    @include fontset-size($property, $min, $max);
-  }
-  @else if type-of($range) == number {
-    @include fontset-size($property, $range);
-  }
-  @else {
-    @error "Invalid key/value";
-  }
-}
-
-@mixin fontset-font($key){
-
-  // Get font definitions
-
-  $font: map-get($fontset-elements, $key);
-  $family: nth($font, 1);
-  $size: nth($font, 2);
-  $line-height: nth($font, 3);
-  $weight: nth($font, 4);
-  $font-style: nth($font, 5);
-
-  // Output css
-
-  font-family: $family;
-  line-height: $line-height;
-  font-weight: $weight;
-  font-style: $font-style;
-
-  @if $size {
-    @include fontset-font-size($size);
+    #{$property}: fontset-rem($min);
   }
 }

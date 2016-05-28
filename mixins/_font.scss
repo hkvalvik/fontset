@@ -1,0 +1,85 @@
+$fontset-families: (
+        primary:        $fontset-primary-family,
+        secondary:      $fontset-secondary-family,
+        monospace:      $fontset-family-monospace,
+);
+
+$fontset-weights: (
+        primary:        $fontset-primary-weight,
+        secondary:      $fontset-secondary-weight,
+        secondary-bold: $fontset-secondary-weight-bold,
+);
+
+@function fontset-get-weight($value) {
+  @if map_has_key($fontset-weights, $value) {
+    @return map-get($fontset-weights, $value);
+  }
+  @return $value;
+}
+
+@function fontset-get-weights($value) {
+  $normal: nth($value, 1);
+  $bold: null;
+  @if type-of($value) == list {
+    $bold: nth($value, 2);
+  }
+  @return (
+          normal: fontset-get-weight($normal),
+          bold: fontset-get-weight($bold)
+  );
+}
+
+@function fontset-get-font-family($value) {
+  @if map_has_key($fontset-families, $value) {
+    @return map-get($fontset-families, $value);
+  }
+  @return $value;
+}
+
+@mixin fontset-font-size($range) {
+  $min: null;
+  $max: null;
+  @if type-of($range) == list {
+    $min: nth($range, 1);
+    $max: nth($range, 2);
+    @include fontset-size(font-size, $min, $max);
+  }
+  @else if type-of($range) == number {
+    @include fontset-size(font-size, $range);
+  }
+  @else {
+    @error "Invalid key/value";
+  }
+}
+
+@mixin fontset-font($key){
+
+  // Get font definitions
+
+  $font: map-get($fontset-elements, $key);
+  $family: fontset-get-font-family(nth($font, 1));
+  $size: nth($font, 2);
+  $line-height: nth($font, 3);
+  $weights: fontset-get-weights(nth($font, 4));
+  $weight-normal: map-get($weights, normal);
+  $weight-bold: map-get($weights, bold);
+  $font-style: nth($font, 5);
+
+  // Output css
+
+  font-family: $family;
+  line-height: $line-height;
+  font-weight: $weight-normal;
+  font-style: $font-style;
+
+  @if($weight-bold){
+    b,
+    strong {
+      font-weight: $weight-bold;
+    }
+  }
+
+  @if $size {
+    @include fontset-font-size($size);
+  }
+}

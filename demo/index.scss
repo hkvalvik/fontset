@@ -1,6 +1,6 @@
 @import "../node_modules/normalize-scss/sass/normalize";
 @import "../node_modules/sass-media-mixins/index";
-@import "../settings";
+@import "../index";
 @import "shadow";
 
 @include normalize;
@@ -13,17 +13,16 @@
   }
 }
 
-$max-width: 1200px;
-
 body {
   //background-color: #fafafa;
+  min-width: $fontset-min-width;
 }
 
 .demo {
   @include clearfix;
-  padding: 0 20px 52px 20px;
+  @include fontset-fluid(padding, fontset-rem(12), fontset-rem(32));
   margin: 0 auto;
-  max-width: $max-width;
+  max-width: $fontset-max-width;
   color: #303030;
 
   select {
@@ -80,18 +79,19 @@ body {
 
 .demo-font-list {
   @include clearfix;
-  margin-bottom: 32px;
+  @include fontset-fluid(margin-bottom, fontset-rem(8), fontset-rem(32));
   font-size: 0;
   line-height: 0;
 
   button {
-    margin: 0 8px 8px 0;
+    @include fontset-fluid(margin, fontset-rem(.5), fontset-rem(2));
   }
 
   img {
+    @include fontset-fluid(height, fontset-rem(16), fontset-rem(22));
     display: block;
     margin: 0;
-    max-height: 32px;
+
   }
 }
 
@@ -101,22 +101,3 @@ main {
     width: 70%;
   }
 }
-
-/*
-section {
-  margin-bottom: 2em;
-  padding: 2em 1em;
-  border: solid 1px #eee;
-  background-color: #fff;
-}
-
-section > section {
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25), 0 1px 1px rgba(0, 0, 0, 0.25);
-  border: none 0;
-}
-
-section > section:last-child {
-  margin-bottom: 0 !important;
-}
-*/
-

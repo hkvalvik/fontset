@@ -1,0 +1,25 @@
+// http://www.sassmeister.com/gist/7f22e44ace49b5124eec
+
+@function fontset-strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fontset-fluid($properties, $min-value, $max-value, $min-vw: fontset-rem($fontset-min-width), $max-vw: fontset-rem($fontset-max-width)) {
+  & {
+    @each $property in $properties {
+      #{$property}: $min-value;
+    }
+
+    @media screen and (min-width: $min-vw) {
+      @each $property in $properties {
+        #{$property}: calc(#{$min-value} + #{fontset-strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{fontset-strip-unit($max-vw - $min-vw)});
+      }
+    }
+
+    @media screen and (min-width: $max-vw) {
+      @each $property in $properties {
+        #{$property}: $max-value;
+      }
+    }
+  }
+}
