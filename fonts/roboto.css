@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
 /* General */
 /* Responsive */
 /* Elements */
@@ -28,7 +28,7 @@
   margin-top: 0;
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   font-size: 0.875rem; }
   .fontset address {
@@ -39,6 +39,9 @@
     @media screen and (min-width: 75rem) {
       .fontset address {
         margin-bottom: 1.75rem; } }
+  .fontset address b,
+  .fontset address strong {
+    font-weight: 500; }
 
 .fontset blockquote {
   margin-top: 0;
@@ -57,6 +60,9 @@
     @media screen and (min-width: 75rem) {
       .fontset blockquote {
         margin-bottom: 1.75rem; } }
+  .fontset blockquote b,
+  .fontset blockquote strong {
+    font-weight: 400; }
   .fontset blockquote {
     font-size: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -69,12 +75,15 @@
 .fontset button {
   font-family: "Roboto", sans-serif;
   line-height: 1.25;
-  font-weight: 500;
+  font-weight: 400;
   padding: 0.625em 1.25em;
   border: none 0;
   color: #fff;
   background-color: deeppink;
   transition: box-shadow 0.25s ease; }
+  .fontset button b,
+  .fontset button strong {
+    font-weight: 500; }
   .fontset button {
     font-size: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -109,7 +118,7 @@
   margin-top: 0;
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer; }
   .fontset summary {
     margin-bottom: 0.875rem; }
@@ -119,6 +128,9 @@
     @media screen and (min-width: 75rem) {
       .fontset summary {
         margin-bottom: 1.75rem; } }
+  .fontset summary b,
+  .fontset summary strong {
+    font-weight: 500; }
   .fontset summary {
     font-size: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -152,7 +164,10 @@
 .fontset dt {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
-  font-weight: 500; }
+  font-weight: 400; }
+  .fontset dt b,
+  .fontset dt strong {
+    font-weight: 500; }
   .fontset dt {
     font-size: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -167,6 +182,9 @@
   line-height: 1.5;
   font-weight: 300;
   padding-left: 28px; }
+  .fontset dd b,
+  .fontset dd strong {
+    font-weight: 400; }
   .fontset dd {
     font-size: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -201,7 +219,10 @@
 .fontset figcaption {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
-  font-weight: 500; }
+  font-weight: 400; }
+  .fontset figcaption b,
+  .fontset figcaption strong {
+    font-weight: 500; }
   .fontset figcaption {
     font-size: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -224,6 +245,9 @@
     @media screen and (min-width: 75rem) {
       .fontset h1 {
         margin-bottom: 1.75rem; } }
+  .fontset h1 b,
+  .fontset h1 strong {
+    font-weight: 500; }
   .fontset h1 {
     font-size: 1.81438rem; }
     @media screen and (min-width: 20rem) {
@@ -246,6 +270,9 @@
     @media screen and (min-width: 75rem) {
       .fontset h2 {
         margin-bottom: 1.75rem; } }
+  .fontset h2 b,
+  .fontset h2 strong {
+    font-weight: 500; }
   .fontset h2 {
     font-size: 1.51188rem; }
     @media screen and (min-width: 20rem) {
@@ -268,6 +295,9 @@
     @media screen and (min-width: 75rem) {
       .fontset h3 {
         margin-bottom: 1.75rem; } }
+  .fontset h3 b,
+  .fontset h3 strong {
+    font-weight: 500; }
   .fontset h3 {
     font-size: 1.26rem; }
     @media screen and (min-width: 20rem) {
@@ -290,6 +320,9 @@
     @media screen and (min-width: 75rem) {
       .fontset h4 {
         margin-bottom: 1.75rem; } }
+  .fontset h4 b,
+  .fontset h4 strong {
+    font-weight: 500; }
   .fontset h4 {
     font-size: 1.05rem; }
     @media screen and (min-width: 20rem) {
@@ -312,6 +345,9 @@
     @media screen and (min-width: 75rem) {
       .fontset h5 {
         margin-bottom: 1.75rem; } }
+  .fontset h5 b,
+  .fontset h5 strong {
+    font-weight: 500; }
   .fontset h5 {
     font-size: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -334,6 +370,9 @@
     @media screen and (min-width: 75rem) {
       .fontset h6 {
         margin-bottom: 1.75rem; } }
+  .fontset h6 b,
+  .fontset h6 strong {
+    font-weight: 500; }
   .fontset h6 {
     font-size: 0.72937rem; }
     @media screen and (min-width: 20rem) {
@@ -438,6 +477,9 @@
   line-height: 1.25;
   font-weight: 300;
   padding-left: 14px; }
+  .fontset li b,
+  .fontset li strong {
+    font-weight: 400; }
   .fontset li {
     font-size: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -459,7 +501,7 @@
   margin-top: 0;
   font-family: "Roboto", sans-serif;
   line-height: 1.25;
-  font-weight: 500; }
+  font-weight: 400; }
   .fontset nav {
     margin-bottom: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -468,6 +510,9 @@
     @media screen and (min-width: 75rem) {
       .fontset nav {
         margin-bottom: 1.75rem; } }
+  .fontset nav b,
+  .fontset nav strong {
+    font-weight: 500; }
   .fontset nav {
     font-size: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -484,10 +529,13 @@
   .fontset nav a {
     font-family: "Roboto", sans-serif;
     line-height: 1.25;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
     display: block;
     padding: 0.5em 0; }
+    .fontset nav a b,
+    .fontset nav a strong {
+      font-weight: 500; }
     .fontset nav a {
       font-size: 0.875rem; }
       @media screen and (min-width: 20rem) {
@@ -512,6 +560,9 @@
     @media screen and (min-width: 75rem) {
       .fontset p {
         margin-bottom: 1.75rem; } }
+  .fontset p b,
+  .fontset p strong {
+    font-weight: 400; }
   .fontset p {
     font-size: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -566,6 +617,9 @@
   line-height: 1.25;
   font-weight: 400;
   text-align: left; }
+  .fontset caption b,
+  .fontset caption strong {
+    font-weight: 500; }
   .fontset caption {
     font-size: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -584,7 +638,10 @@
 .fontset th {
   font-family: "Roboto", sans-serif;
   line-height: 1.25;
-  font-weight: 500; }
+  font-weight: 400; }
+  .fontset th b,
+  .fontset th strong {
+    font-weight: 500; }
   .fontset th {
     font-size: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -599,3 +656,6 @@
   line-height: 1.25;
   font-weight: 300;
   font-size: 0.875rem; }
+  .fontset td b,
+  .fontset td strong {
+    font-weight: 400; }

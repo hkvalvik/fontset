@@ -18,10 +18,15 @@ $fontset-weights: (
 }
 
 @function fontset-get-weights($value) {
-  $normal: nth($value, 1);
+  $value: fontset-get-weight($value);
+  $normal: null;
   $bold: null;
   @if type-of($value) == list {
+    $normal: nth($value, 1);
     $bold: nth($value, 2);
+  }
+  @else {
+    $normal: $value;
   }
   @return (
           normal: fontset-get-weight($normal),
@@ -62,6 +67,7 @@ $fontset-weights: (
   $line-height: nth($font, 3);
   $weights: fontset-get-weights(nth($font, 4));
   $weight-normal: map-get($weights, normal);
+  //@debug $family $weight-normal type_of(nth($font, 4));
   $weight-bold: map-get($weights, bold);
   $font-style: nth($font, 5);
 

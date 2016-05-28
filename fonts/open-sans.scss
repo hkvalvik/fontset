@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 $fontset-primary-family: 'Open Sans', sans-serif;
-$fontset-primary-weight: 400;
+$fontset-primary-weight: 400 600;
 $fontset-secondary-family: $fontset-primary-family;
-$fontset-secondary-weight: 300;
-$fontset-secondary-weight-bold: 600;
+$fontset-secondary-weight: 300 400;
+$fontset-secondary-weight-bold: 600 700;
 @import "../index";
