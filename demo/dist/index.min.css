@@ -518,13 +518,25 @@ body {
       .demo-font-list {
         margin-bottom: 2rem; } }
   .demo-font-list button {
-    margin: 0.03125rem; }
-    @media screen and (min-width: 20rem) {
-      .demo-font-list button {
-        margin: calc(0.03125rem + 0.09375 * (100vw - 20rem) / 55); } }
-    @media screen and (min-width: 75rem) {
-      .demo-font-list button {
-        margin: 0.125rem; } }
+    position: relative; }
+    .demo-font-list button {
+      margin: 0.03125rem; }
+      @media screen and (min-width: 20rem) {
+        .demo-font-list button {
+          margin: calc(0.03125rem + 0.09375 * (100vw - 20rem) / 55); } }
+      @media screen and (min-width: 75rem) {
+        .demo-font-list button {
+          margin: 0.125rem; } }
+  .demo-font-list button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.25); }
+  .demo-font-list-selected:after {
+    background-color: transparent !important; }
   .demo-font-list img {
     display: block;
     margin: 0; }

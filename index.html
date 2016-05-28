@@ -9,11 +9,14 @@
     <script>
         function init(){
             new Demo.StyleSheet(document, {
-                stylesheets: 'cabin-sketch,open-sans,roboto-slab,roboto-slab_roboto,roboto'.split(',')
+                stylesheets: '[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]'.split(',')
             });
             new Demo.TextToggle(document, {});
             new Demo.Nav(document.querySelector('[data-demo-nav]'), {
                 sections: document.querySelectorAll('[data-demo-nav-sections] section')
+            });
+            new Demo.FontList(document.querySelector('[data-demo-font-list]'), {
+                selectedClass: 'demo-font-list-selected'
             });
         }
     </script>
@@ -48,20 +51,26 @@
                         Just add <abbr title="Hypertext Markup Language">HTML</abbr>!
                     </strong>
                 </p>
-                <div class="demo-font-list">
-                        <button onclick="document.location.href = '#font=cabin-sketch'">
+                <div class="demo-font-list" data-demo-font-list>
+                        <button data-demo-font-list-button="cabin-sketch" __onclick="Demo.toggleFont(event, 'cabin-sketch', 'demo-font-list-selected')" class="">
                             <img src="demo/dist/screenshots/cabin-sketch.png" alt="cabin-sketch" />
                         </button>
-                        <button onclick="document.location.href = '#font=open-sans'">
+                        <button data-demo-font-list-button="open-sans" __onclick="Demo.toggleFont(event, 'open-sans', 'demo-font-list-selected')" class="">
                             <img src="demo/dist/screenshots/open-sans.png" alt="open-sans" />
                         </button>
-                        <button onclick="document.location.href = '#font=roboto-slab'">
+                        <button data-demo-font-list-button="palatino_arial" __onclick="Demo.toggleFont(event, 'palatino_arial', 'demo-font-list-selected')" class="">
+                            <img src="demo/dist/screenshots/palatino_arial.png" alt="palatino_arial" />
+                        </button>
+                        <button data-demo-font-list-button="playfair-display_open-sans-condensed" __onclick="Demo.toggleFont(event, 'playfair-display_open-sans-condensed', 'demo-font-list-selected')" class="">
+                            <img src="demo/dist/screenshots/playfair-display_open-sans-condensed.png" alt="playfair-display_open-sans-condensed" />
+                        </button>
+                        <button data-demo-font-list-button="roboto-slab" __onclick="Demo.toggleFont(event, 'roboto-slab', 'demo-font-list-selected')" class="">
                             <img src="demo/dist/screenshots/roboto-slab.png" alt="roboto-slab" />
                         </button>
-                        <button onclick="document.location.href = '#font=roboto-slab_roboto'">
+                        <button data-demo-font-list-button="roboto-slab_roboto" __onclick="Demo.toggleFont(event, 'roboto-slab_roboto', 'demo-font-list-selected')" class="demo-font-list-selected">
                             <img src="demo/dist/screenshots/roboto-slab_roboto.png" alt="roboto-slab_roboto" />
                         </button>
-                        <button onclick="document.location.href = '#font=roboto'">
+                        <button data-demo-font-list-button="roboto" __onclick="Demo.toggleFont(event, 'roboto', 'demo-font-list-selected')" class="">
                             <img src="demo/dist/screenshots/roboto.png" alt="roboto" />
                         </button>
                 </div>

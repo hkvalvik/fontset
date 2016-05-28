@@ -5,6 +5,51 @@ Demo.getFontName = function(){
     return font || document.querySelector('[data-demo-stylesheet]').href.split('/').pop().replace('.css', '');
 };
 
+Demo.FontList = function(element, options){
+    return {
+
+        element: element,
+
+        options: {
+            selectedClass: options.selectedClass || ''
+        },
+
+        _buttons: null,
+
+        _init: function(){
+            this._buttons = [].slice.call(this.element.querySelectorAll('[data-demo-font-list-button]'));
+            this._buttons.forEach(this._initButton.bind(this));
+            this._selectFont(Demo.getFontName());
+            return this;
+        },
+
+        _initButton: function(element){
+            element.addEventListener('click', this._onButtonClick.bind(this));
+        },
+
+        _onButtonClick: function(event){
+            event.preventDefault();
+            var name = event.currentTarget.getAttribute('data-demo-font-list-button');
+            this._selectFont(name);
+        },
+
+        _selectFont: function(name){
+            var button = this._getButton(name);
+            var cssClass = this.options.selectedClass;
+            this.element.querySelector('.'+cssClass).classList.remove(cssClass);
+            button.classList.add(cssClass);
+            document.location.href = '#font=' + name;
+        },
+
+        _getButton: function(name){
+            return this._buttons.filter(function(button){
+                return button.getAttribute('data-demo-font-list-button') == name;
+            }).pop();
+        }
+
+    }._init();
+};
+
 Demo.getFormattedFontName = function(){
 
     function uppercase(g){
@@ -60,38 +105,34 @@ Demo.StyleSheet = function(element, options){
 
         _init: function(){
             this._link = this.element.querySelector('[data-demo-stylesheet]');
-            //this._initStylesheets();
-
             this._setFont();
-            window.onhashchange = this._setFont.bind(this);
-
+            window.onhashchange = this._onHashChange.bind(this);
             return this;
+        },
+
+        _onHashChange: function(){
+            setTimeout(this._removeStylesheet.bind(this, this._link), 2500);
+            this._setFont();
         },
 
         _setFont: function(){
             var font = Demo.Url.parse().font;
             if(font){
-                this._link.href = 'fonts/'+font+'.css';
+                var element = document.createElement('link');
+                element.setAttribute('data-demo-stylesheet', '');
+                element.rel = 'stylesheet';
+                element.href = 'fonts/'+font+'.css';
+                this._link.parentNode.insertBefore(element, this._link.nextSibling);
+                this._link = element;
             }
         },
 
-        /*_initStylesheets: function(){
-            var select = this.element.querySelector('[data-demo-stylesheets]');
-            this.options.stylesheets.forEach(function(path){
-                var filename = path.split('/').pop().split('.').shift();
-                var option = document.createElement('option');
-                option.textContent = filename;
-                option.value = path;
-                if(path == this._link.getAttribute('href')){
-                    option.selected = true;
-                }
-                select.appendChild(option);
-                select.onchange = this._loadStylesheet.bind(this);
-            }.bind(this));
-        },*/
-
-        _loadStylesheet: function(event){
-            this._link.href = event.target.value;
+        _removeStylesheet: function(element){
+            var styleSheets = document.querySelectorAll('[data-demo-stylesheet]');
+            for(var i=0; i<styleSheets.length-1; i++){
+                var styleSheet = styleSheets[i];
+                styleSheet.parentNode.removeChild(styleSheet);
+            }
         }
 
     }._init();

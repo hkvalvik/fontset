@@ -85,6 +85,23 @@ body {
 
   button {
     @include fontset-fluid(margin, fontset-rem(.5), fontset-rem(2));
+    position: relative;
+    //background-color: transparent;
+  }
+
+  button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(black, .25);
+  }
+
+  &-selected:after {
+    //background-color: rgba($fontset-color-primary, .25) !important;
+    background-color: transparent !important;
   }
 
   img {

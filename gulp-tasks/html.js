@@ -8,15 +8,27 @@ module.exports = function(gulp){
         const CSS_DIR = 'fonts';
         var settingsContent = hljs.highlight('scss', fs.readFileSync('_settings.scss', 'utf-8')).value;
         settingsContent = settingsContent.replace(/\/\*/g, '<span class="demo-hljs-heading">').replace(/\*\//g, '</span>');
-        const FONTS = fs.readdirSync(CSS_DIR)
+        const FONT_NAMES = fs.readdirSync(CSS_DIR)
             .filter(f => f.split('.').pop() == 'css')
             .map(f => f.split('.').shift());
+        const SELECTED_FONT = FONT_NAMES.filter(name => {
+            return name == 'roboto-slab_roboto';
+        }).pop();
+        const SELECTED_BUTTON_CLASS = 'demo-font-list-selected';
+        const FONTS = FONT_NAMES.map(name => {
+            return {
+                name: name,
+                selected: name == SELECTED_FONT,
+                buttonClass: name == SELECTED_FONT ? SELECTED_BUTTON_CLASS : ''
+            }
+        });
 
         return gulp.src('demo/index.hbs')
             .pipe(
                 handlebars({
                         fonts: FONTS,
-                        selectedFont: FONTS[3],
+                        selectedFont: SELECTED_FONT,
+                        selectedButtonClass: SELECTED_BUTTON_CLASS,
                         fontsPath: 'fonts',
                         screenshotsPath: 'demo/dist/screenshots',
                         exampleIncludePath: 'node_modules/fontset',

@@ -15,6 +15,9 @@
             new Demo.Nav(document.querySelector('[data-demo-nav]'), {
                 sections: document.querySelectorAll('[data-demo-nav-sections] section')
             });
+            new Demo.FontList(document.querySelector('[data-demo-font-list]'), {
+                selectedClass: '{{selectedButtonClass}}'
+            });
         }
     </script>
 </head>
@@ -48,10 +51,10 @@
                         Just add <abbr title="Hypertext Markup Language">HTML</abbr>!
                     </strong>
                 </p>
-                <div class="demo-font-list">
+                <div class="demo-font-list" data-demo-font-list>
                     {{#each fonts}}
-                        <button onclick="document.location.href = '#font={{this}}'">
-                            <img src="{{../screenshotsPath}}/{{this}}.png" alt="{{this}}" />
+                        <button data-demo-font-list-button="{{name}}" __onclick="Demo.toggleFont(event, '{{name}}', '{{../selectedButtonClass}}')" class="{{buttonClass}}">
+                            <img src="{{../screenshotsPath}}/{{name}}.png" alt="{{name}}" />
                         </button>
                     {{/each}}
                 </div>
