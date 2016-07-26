@@ -2,13 +2,20 @@
   ol,
   ul {
     @include fontset-block;
+    @include fontset-size(padding-left, $fontset-list-indent);
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
     margin-left: 0;
     margin-right: 0;
-    padding: 0 0 0 $fontset-list-indent;
 
     ol,
     ul {
-      margin-top: 12px;
+      @include fontset-size(
+        margin-top,
+        nth($fontset-list-indent, 1) / 2,
+        nth($fontset-list-indent, 2) / 2
+      );
       margin-bottom: 0 !important;
     }
   }
@@ -29,8 +36,16 @@
 
   li {
     @include fontset-font(li);
-    @include fontset-size(margin-bottom, 8, 12);
-    padding-left: $fontset-list-indent/2;
+    @include fontset-size(
+      margin-bottom,
+      nth($fontset-list-indent, 1) / 2,
+      nth($fontset-list-indent, 2) / 2
+    );
+    @include fontset-size(
+      padding-left,
+      nth($fontset-list-indent, 1) / 2,
+      nth($fontset-list-indent, 2) / 2
+    );
   }
 
 }

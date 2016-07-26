@@ -48,9 +48,11 @@
   font-family: "Open Sans", sans-serif;
   line-height: 1.75;
   font-weight: 300;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
   margin-left: 0;
   margin-right: 0;
-  padding: 0 0 0 26px;
   border-left: solid #f0f0f0; }
   .fontset blockquote {
     margin-bottom: 0.875rem; }
@@ -71,6 +73,14 @@
     @media screen and (min-width: 75rem) {
       .fontset blockquote {
         font-size: 1rem; } }
+  .fontset blockquote {
+    padding-left: 0.75rem; }
+    @media screen and (min-width: 20rem) {
+      .fontset blockquote {
+        padding-left: calc(0.75rem + 0.875 * (100vw - 20rem) / 55); } }
+    @media screen and (min-width: 75rem) {
+      .fontset blockquote {
+        padding-left: 1.625rem; } }
 
 .fontset button {
   font-family: "Open Sans", sans-serif;
@@ -153,9 +163,22 @@
 
 .fontset dt,
 .fontset dd {
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
   text-align: left;
-  margin: 16px 0 0 0;
   padding: 0; }
+  .fontset dt,
+  .fontset dd {
+    margin-top: 0.875rem; }
+    @media screen and (min-width: 20rem) {
+      .fontset dt,
+      .fontset dd {
+        margin-top: calc(0.875rem + 0.875 * (100vw - 20rem) / 55); } }
+    @media screen and (min-width: 75rem) {
+      .fontset dt,
+      .fontset dd {
+        margin-top: 1.75rem; } }
 
 .fontset dt:first-of-type,
 .fontset dd:first-of-type {
@@ -180,8 +203,7 @@
 .fontset dd {
   font-family: "Open Sans", sans-serif;
   line-height: 1.5;
-  font-weight: 300;
-  padding-left: 28px; }
+  font-weight: 300; }
   .fontset dd b,
   .fontset dd strong {
     font-weight: 400; }
@@ -193,6 +215,14 @@
     @media screen and (min-width: 75rem) {
       .fontset dd {
         font-size: 1rem; } }
+  .fontset dd {
+    padding-left: 0.875rem; }
+    @media screen and (min-width: 20rem) {
+      .fontset dd {
+        padding-left: calc(0.875rem + 0.875 * (100vw - 20rem) / 55); } }
+    @media screen and (min-width: 75rem) {
+      .fontset dd {
+        padding-left: 1.75rem; } }
 
 .fontset dd + dd,
 .fontset dt + dt,
@@ -443,9 +473,11 @@
 .fontset ol,
 .fontset ul {
   margin-top: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
   margin-left: 0;
-  margin-right: 0;
-  padding: 0 0 0 28px; }
+  margin-right: 0; }
   .fontset ol,
   .fontset ul {
     margin-bottom: 0.875rem; }
@@ -457,12 +489,39 @@
       .fontset ol,
       .fontset ul {
         margin-bottom: 1.75rem; } }
+  .fontset ol,
+  .fontset ul {
+    padding-left: 0.875rem; }
+    @media screen and (min-width: 20rem) {
+      .fontset ol,
+      .fontset ul {
+        padding-left: calc(0.875rem + 0.875 * (100vw - 20rem) / 55); } }
+    @media screen and (min-width: 75rem) {
+      .fontset ol,
+      .fontset ul {
+        padding-left: 1.75rem; } }
   .fontset ol ol,
   .fontset ol ul,
   .fontset ul ol,
   .fontset ul ul {
-    margin-top: 12px;
     margin-bottom: 0 !important; }
+    .fontset ol ol,
+    .fontset ol ul,
+    .fontset ul ol,
+    .fontset ul ul {
+      margin-top: 0.4375rem; }
+      @media screen and (min-width: 20rem) {
+        .fontset ol ol,
+        .fontset ol ul,
+        .fontset ul ol,
+        .fontset ul ul {
+          margin-top: calc(0.4375rem + 0.4375 * (100vw - 20rem) / 55); } }
+      @media screen and (min-width: 75rem) {
+        .fontset ol ol,
+        .fontset ol ul,
+        .fontset ul ol,
+        .fontset ul ul {
+          margin-top: 0.875rem; } }
 
 .fontset ol {
   list-style-type: decimal;
@@ -475,8 +534,7 @@
 .fontset li {
   font-family: "Open Sans", sans-serif;
   line-height: 1.25;
-  font-weight: 300;
-  padding-left: 14px; }
+  font-weight: 300; }
   .fontset li b,
   .fontset li strong {
     font-weight: 400; }
@@ -489,13 +547,21 @@
       .fontset li {
         font-size: 1rem; } }
   .fontset li {
-    margin-bottom: 0.5rem; }
+    margin-bottom: 0.4375rem; }
     @media screen and (min-width: 20rem) {
       .fontset li {
-        margin-bottom: calc(0.5rem + 0.25 * (100vw - 20rem) / 55); } }
+        margin-bottom: calc(0.4375rem + 0.4375 * (100vw - 20rem) / 55); } }
     @media screen and (min-width: 75rem) {
       .fontset li {
-        margin-bottom: 0.75rem; } }
+        margin-bottom: 0.875rem; } }
+  .fontset li {
+    padding-left: 0.4375rem; }
+    @media screen and (min-width: 20rem) {
+      .fontset li {
+        padding-left: calc(0.4375rem + 0.4375 * (100vw - 20rem) / 55); } }
+    @media screen and (min-width: 75rem) {
+      .fontset li {
+        padding-left: 0.875rem; } }
 
 .fontset nav {
   margin-top: 0;
@@ -545,7 +611,7 @@
         .fontset nav a {
           font-size: 1rem; } }
   .fontset nav ul ul a {
-    padding-left: 28px; }
+    padding-left: 14 28; }
 
 .fontset p {
   margin-top: 0;

@@ -1,3 +1,3 @@
 # Fontset
 
-[Documentation](http://hkvalvik.github.io/fontset/)
+Full documentation: [Documentation](http://hkvalvik.github.io/fontset/)

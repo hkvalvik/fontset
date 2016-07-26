@@ -3,7 +3,13 @@
 }
 
 @mixin fontset-size($property, $min, $max: null) {
-  @if $max {
+  @if type-of($min) == list {
+    $list: $min;
+    $min: fontset-rem(nth($list, 1));
+    $max: fontset-rem(nth($list, 2));
+    @include fontset-fluid($property, $min, $max);
+  }
+  @else if $max {
     $min: fontset-rem($min);
     $max: fontset-rem($max);
     @include fontset-fluid($property, $min, $max);

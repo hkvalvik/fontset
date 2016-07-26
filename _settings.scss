@@ -11,7 +11,6 @@ $fontset-secondary-weight: normal !default;
 $fontset-secondary-weight-bold: bold !default;
 $fontset-family-monospace: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace !default;
 
-
 // Colors
 
 $fontset-color-primary: deeppink !default;
@@ -19,19 +18,15 @@ $fontset-color-primary-contrast: #fff !default;
 $fontset-color-secondary: #f0f0f0;
 $fontset-color-secondary-contrast: #404040;
 
-
-
 // Indentation for blockquotes, lists, e.t.c.
 
-$fontset-indent: 28px !default;
+$fontset-indent: 14 28 !default;
 
 
 
 /* Responsive */
 
 
-
-// Responsive css units
 
 // The minimum and maximum width of the page content.
 // These values will prevent properties with vw units from getting too small or too large.
@@ -45,21 +40,8 @@ $fontset-max-width: 1200px !default;
 
 $fontset-block-margin-bottom: 14 28 !default;
 
-// Valid units: px, rem, vw (experimental)
-
-//$fontset-unit: rem !default;
-$fontset-unit: vw !default;
-
-// If $fontset-unit is rem, this media query will be used for scaling down
-// font-sizes, margins and other values on small screens.
-$fontset-breakpoint-rem: "(max-width: 780px)" !default;
-
 // If $fontset-unit is rem, this value should be equal to to the font-size of <html>.
 $fontset-rem-base: 16 !default;
-
-// If $fontset-unit is px, this media query will be used for scaling down
-// font-sizes, margins and other values on small screens.
-$fontset-breakpoint-px: "(max-width: 780px)" !default;
 
 
 
@@ -123,9 +105,9 @@ $fontset-abbr-border-bottom: 1px dotted $fontset-color-primary !default;
 
 // blockquote
 
-$fontset-blockquote-indent: $fontset-indent;
 $fontset-blockquote-border-width: 2px !default;
 $fontset-blockquote-border-color: $fontset-color-secondary !default;
+$fontset-blockquote-indent: $fontset-indent;
 
 // button
 
@@ -142,7 +124,7 @@ $fontset-code-color: $fontset-color-primary !default;
 
 // dl
 
-$dl-indent: $fontset-indent;
+$dl-indent: $fontset-indent !default;
 
 // hr
 

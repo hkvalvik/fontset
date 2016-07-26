@@ -2,9 +2,16 @@
   blockquote {
     @include fontset-block;
     @include fontset-font(blockquote);
+    @include fontset-size(
+      padding-left,
+      nth($fontset-blockquote-indent, 1) - fontset-strip-unit($fontset-blockquote-border-width),
+      nth($fontset-blockquote-indent, 2) - fontset-strip-unit($fontset-blockquote-border-width)
+    );
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
     margin-left: 0;
     margin-right: 0;
-    padding: 0 0 0 ($fontset-blockquote-indent - $fontset-blockquote-border-width);
     border-left: solid $fontset-blockquote-border-color;
   }
 }
