@@ -128,7 +128,6 @@ $fontset-secondary-weight-bold: 400;
 <span class="hljs-variable">$fontset-secondary-weight-bold</span>: bold !default;
 <span class="hljs-variable">$fontset-family-monospace</span>: <span class="hljs-string">"Lucida Sans Typewriter"</span>, <span class="hljs-string">"Lucida Console"</span>, monaco, <span class="hljs-string">"Bitstream Vera Sans Mono"</span>, monospace !default;
 
-
 <span class="hljs-comment">// Colors</span>
 
 <span class="hljs-variable">$fontset-color-primary</span>: deeppink !default;
@@ -136,19 +135,15 @@ $fontset-secondary-weight-bold: 400;
 <span class="hljs-variable">$fontset-color-secondary</span>: <span class="hljs-number">#f0f0f0</span>;
 <span class="hljs-variable">$fontset-color-secondary-contrast</span>: <span class="hljs-number">#404040</span>;
 
-
-
 <span class="hljs-comment">// Indentation for blockquotes, lists, e.t.c.</span>
 
-<span class="hljs-variable">$fontset-indent</span>: <span class="hljs-number">28px</span> !default;
+<span class="hljs-variable">$fontset-indent</span>: <span class="hljs-number">14</span> <span class="hljs-number">28</span> !default;
 
 
 
 <span class="hljs-comment"><span class="demo-hljs-heading"> Responsive </span></span>
 
 
-
-<span class="hljs-comment">// Responsive css units</span>
 
 <span class="hljs-comment">// The minimum and maximum width of the page content.</span>
 <span class="hljs-comment">// These values will prevent properties with vw units from getting too small or too large.</span>
@@ -162,21 +157,8 @@ $fontset-secondary-weight-bold: 400;
 
 <span class="hljs-variable">$fontset-block-margin-bottom</span>: <span class="hljs-number">14</span> <span class="hljs-number">28</span> !default;
 
-<span class="hljs-comment">// Valid units: px, rem, vw (experimental)</span>
-
-<span class="hljs-comment">//$fontset-unit: rem !default;</span>
-<span class="hljs-variable">$fontset-unit</span>: vw !default;
-
-<span class="hljs-comment">// If $fontset-unit is rem, this media query will be used for scaling down</span>
-<span class="hljs-comment">// font-sizes, margins and other values on small screens.</span>
-<span class="hljs-variable">$fontset-breakpoint-rem</span>: <span class="hljs-string">"(max-width: 780px)"</span> !default;
-
 <span class="hljs-comment">// If $fontset-unit is rem, this value should be equal to to the font-size of &lt;html&gt;.</span>
 <span class="hljs-variable">$fontset-rem-base</span>: <span class="hljs-number">16</span> !default;
-
-<span class="hljs-comment">// If $fontset-unit is px, this media query will be used for scaling down</span>
-<span class="hljs-comment">// font-sizes, margins and other values on small screens.</span>
-<span class="hljs-variable">$fontset-breakpoint-px</span>: <span class="hljs-string">"(max-width: 780px)"</span> !default;
 
 
 
@@ -240,9 +222,9 @@ td:         secondary     <span class="hljs-number">14</span>            <span c
 
 <span class="hljs-comment">// blockquote</span>
 
-<span class="hljs-variable">$fontset-blockquote-indent</span>: <span class="hljs-variable">$fontset-indent</span>;
 <span class="hljs-variable">$fontset-blockquote-border-width</span>: <span class="hljs-number">2px</span> !default;
 <span class="hljs-variable">$fontset-blockquote-border-color</span>: <span class="hljs-variable">$fontset-color-secondary</span> !default;
+<span class="hljs-variable">$fontset-blockquote-indent</span>: <span class="hljs-variable">$fontset-indent</span>;
 
 <span class="hljs-comment">// button</span>
 
@@ -259,7 +241,7 @@ td:         secondary     <span class="hljs-number">14</span>            <span c
 
 <span class="hljs-comment">// dl</span>
 
-<span class="hljs-variable">$dl-indent</span>: <span class="hljs-variable">$fontset-indent</span>;
+<span class="hljs-variable">$dl-indent</span>: <span class="hljs-variable">$fontset-indent</span> !default;
 
 <span class="hljs-comment">// hr</span>
 
@@ -686,5 +668,15 @@ td:         secondary     <span class="hljs-number">14</span>            <span c
             </section>
         </main>
     </div>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-81645575-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 </body>
 </html>
