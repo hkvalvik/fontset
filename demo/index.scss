@@ -14,7 +14,6 @@
 }
 
 body {
-  //background-color: #fafafa;
   min-width: $fontset-min-width;
 }
 
@@ -22,28 +21,23 @@ body {
   @include clearfix;
   @include fontset-fluid(padding, fontset-rem(12), fontset-rem(32));
   margin: 0 auto;
-  max-width: $fontset-max-width;
   color: #303030;
-
-  select {
-    background: transparent;
-    border: solid 1px #fff;
-  }
-
-  &-header {
-    padding: 32px 0;
-  }
 
   &-nav {
     @include media-small {
-      position: absolute;
-      left: 0;
-      transform: translateX(-100%);
+      display: none;
     }
     @include media-medium-and-large {
       float: left;
       width: 30%;
       padding-right: 4em;
+    }
+  }
+
+  &-content {
+    @include media-medium-and-large {
+      float: left;
+      width: 70%;
     }
   }
 
@@ -86,7 +80,6 @@ body {
   button {
     @include fontset-fluid(margin, fontset-rem(.5), fontset-rem(2));
     position: relative;
-    //background-color: transparent;
   }
 
   button:after {
@@ -100,7 +93,6 @@ body {
   }
 
   &-selected:after {
-    //background-color: rgba($fontset-color-primary, .25) !important;
     background-color: transparent !important;
   }
 
@@ -109,12 +101,5 @@ body {
     display: block;
     margin: 0;
 
-  }
-}
-
-main {
-  @include media-medium-and-large {
-    float: left;
-    width: 70%;
   }
 }
