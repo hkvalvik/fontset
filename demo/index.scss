@@ -24,13 +24,16 @@ body {
   color: #303030;
 
   &-nav {
-    @include media-small {
-      display: none;
-    }
     @include media-medium-and-large {
       float: left;
       width: 30%;
       padding-right: 4em;
+    }
+  }
+
+  &-nav-elements {
+    @include media-small {
+      display: none;
     }
   }
 
@@ -58,17 +61,14 @@ body {
   }
 }
 
-.demo-panel {
-  @include shadow-2dp;
-  padding: 12px 8px;
-}
-
 .demo-gulp-screenshot {
   display: none;
   white-space: nowrap;
   font-size: 120px;
-  background-color: $fontset-color-primary;
-  color: $fontset-color-primary-contrast;
+  //background-color: $fontset-color-primary;
+  //color: $fontset-color-primary-contrast;
+  background-color: #fff;
+  color: #202020;
 }
 
 .demo-font-list {
@@ -80,6 +80,22 @@ body {
   button {
     @include fontset-fluid(margin, fontset-rem(.5), fontset-rem(2));
     position: relative;
+    background-color: #fff;
+  }
+
+  &-selected {
+    box-shadow: none !important;
+  }
+
+  &--horizontal button {
+    @include shadow-1dp;
+  }
+
+  &--vertical button {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 5px 0;
   }
 
   button:after {
@@ -89,12 +105,13 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(black, .25);
+    background-color: rgba(black, .01);
   }
 
   &-selected:after {
     background-color: transparent !important;
   }
+
 
   img {
     @include fontset-fluid(height, fontset-rem(16), fontset-rem(22));

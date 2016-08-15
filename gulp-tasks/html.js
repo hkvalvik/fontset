@@ -23,7 +23,10 @@ module.exports = function(gulp){
             }
         });
 
-        return gulp.src('demo/index.hbs')
+        return gulp.src([
+                'demo/index.hbs',
+                'demo/documentation.hbs'
+            ])
             .pipe(
                 handlebars({
                         fonts: FONTS,
@@ -35,10 +38,12 @@ module.exports = function(gulp){
                         settingsContent: settingsContent
                     },
                     {
-                        batch : ['./components', './demo']
+                        batch : ['./components', './demo', './demo/partials']
                     })
             )
-            .pipe(rename('index.html'))
+            .pipe(rename({
+                extname: '.html'
+            }))
             .pipe(gulp.dest('.'));
     };
 };

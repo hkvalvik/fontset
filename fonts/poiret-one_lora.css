@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700|Poiret+One");
 /* General */
 /* Responsive */
 /* Elements */
@@ -26,9 +26,9 @@
 
 .fontset address {
   margin-top: 0;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Lora", serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   font-size: 0.875rem; }
   .fontset address {
@@ -45,9 +45,9 @@
 
 .fontset blockquote {
   margin-top: 0;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Lora", serif;
   line-height: 1.75;
-  font-weight: 300;
+  font-weight: 400;
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
@@ -64,7 +64,7 @@
         margin-bottom: 1.75rem; } }
   .fontset blockquote b,
   .fontset blockquote strong {
-    font-weight: 400; }
+    font-weight: 700; }
   .fontset blockquote {
     font-size: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -83,9 +83,9 @@
         padding-left: 1.625rem; } }
 
 .fontset button {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Lora", serif;
   line-height: 1.25;
-  font-weight: 400;
+  font-weight: 700;
   padding: 0.625em 1.25em;
   border: none 0;
   color: #fff;
@@ -126,9 +126,9 @@
 
 .fontset summary {
   margin-top: 0;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Lora", serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 700;
   cursor: pointer; }
   .fontset summary {
     margin-bottom: 0.875rem; }
@@ -185,9 +185,9 @@
   margin-top: 0; }
 
 .fontset dt {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Lora", serif;
   line-height: 1.5;
-  font-weight: 400; }
+  font-weight: 700; }
   .fontset dt b,
   .fontset dt strong {
     font-weight: 700; }
@@ -201,12 +201,12 @@
         font-size: 1rem; } }
 
 .fontset dd {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Lora", serif;
   line-height: 1.5;
-  font-weight: 300; }
+  font-weight: 400; }
   .fontset dd b,
   .fontset dd strong {
-    font-weight: 400; }
+    font-weight: 700; }
   .fontset dd {
     font-size: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -247,9 +247,9 @@
         margin-bottom: 1.75rem; } }
 
 .fontset figcaption {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Lora", serif;
   line-height: 1.5;
-  font-weight: 400; }
+  font-weight: 700; }
   .fontset figcaption b,
   .fontset figcaption strong {
     font-weight: 700; }
@@ -264,7 +264,7 @@
 
 .fontset h1 {
   margin-top: 0;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Poiret One", cursive;
   line-height: 1;
   font-weight: 400; }
   .fontset h1 {
@@ -277,7 +277,7 @@
         margin-bottom: 1.75rem; } }
   .fontset h1 b,
   .fontset h1 strong {
-    font-weight: 700; }
+    font-weight: 400; }
   .fontset h1 {
     font-size: 1.81438rem; }
     @media screen and (min-width: 20rem) {
@@ -289,7 +289,7 @@
 
 .fontset h2 {
   margin-top: 0;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Poiret One", cursive;
   line-height: 1.25;
   font-weight: 400; }
   .fontset h2 {
@@ -302,7 +302,7 @@
         margin-bottom: 1.75rem; } }
   .fontset h2 b,
   .fontset h2 strong {
-    font-weight: 700; }
+    font-weight: 400; }
   .fontset h2 {
     font-size: 1.51188rem; }
     @media screen and (min-width: 20rem) {
@@ -314,7 +314,7 @@
 
 .fontset h3 {
   margin-top: 0;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Poiret One", cursive;
   line-height: 1.25;
   font-weight: 400; }
   .fontset h3 {
@@ -327,7 +327,7 @@
         margin-bottom: 1.75rem; } }
   .fontset h3 b,
   .fontset h3 strong {
-    font-weight: 700; }
+    font-weight: 400; }
   .fontset h3 {
     font-size: 1.26rem; }
     @media screen and (min-width: 20rem) {
@@ -339,7 +339,7 @@
 
 .fontset h4 {
   margin-top: 0;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Poiret One", cursive;
   line-height: 1.25;
   font-weight: 400; }
   .fontset h4 {
@@ -352,7 +352,7 @@
         margin-bottom: 1.75rem; } }
   .fontset h4 b,
   .fontset h4 strong {
-    font-weight: 700; }
+    font-weight: 400; }
   .fontset h4 {
     font-size: 1.05rem; }
     @media screen and (min-width: 20rem) {
@@ -364,7 +364,7 @@
 
 .fontset h5 {
   margin-top: 0;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Poiret One", cursive;
   line-height: 1.25;
   font-weight: 400; }
   .fontset h5 {
@@ -377,7 +377,7 @@
         margin-bottom: 1.75rem; } }
   .fontset h5 b,
   .fontset h5 strong {
-    font-weight: 700; }
+    font-weight: 400; }
   .fontset h5 {
     font-size: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -389,7 +389,7 @@
 
 .fontset h6 {
   margin-top: 0;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Poiret One", cursive;
   line-height: 1.25;
   font-weight: 400; }
   .fontset h6 {
@@ -402,7 +402,7 @@
         margin-bottom: 1.75rem; } }
   .fontset h6 b,
   .fontset h6 strong {
-    font-weight: 700; }
+    font-weight: 400; }
   .fontset h6 {
     font-size: 0.72937rem; }
     @media screen and (min-width: 20rem) {
@@ -533,12 +533,12 @@
   list-style-position: outside; }
 
 .fontset li {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Lora", serif;
   line-height: 1.25;
-  font-weight: 300; }
+  font-weight: 400; }
   .fontset li b,
   .fontset li strong {
-    font-weight: 400; }
+    font-weight: 700; }
   .fontset li {
     font-size: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -566,9 +566,9 @@
 
 .fontset nav {
   margin-top: 0;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Lora", serif;
   line-height: 1.25;
-  font-weight: 400; }
+  font-weight: 700; }
   .fontset nav {
     margin-bottom: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -594,9 +594,9 @@
     padding: 0;
     list-style: none; }
   .fontset nav a {
-    font-family: "Roboto Slab", sans-serif;
+    font-family: "Lora", serif;
     line-height: 1.25;
-    font-weight: 400;
+    font-weight: 700;
     text-decoration: none;
     display: block;
     padding: 0.5em 0; }
@@ -616,9 +616,9 @@
 
 .fontset p {
   margin-top: 0;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Lora", serif;
   line-height: 1.75;
-  font-weight: 300; }
+  font-weight: 400; }
   .fontset p {
     margin-bottom: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -629,7 +629,7 @@
         margin-bottom: 1.75rem; } }
   .fontset p b,
   .fontset p strong {
-    font-weight: 400; }
+    font-weight: 700; }
   .fontset p {
     font-size: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -680,13 +680,13 @@
   padding-left: 0.75rem; }
 
 .fontset caption {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Poiret One", cursive;
   line-height: 1.25;
   font-weight: 400;
   text-align: left; }
   .fontset caption b,
   .fontset caption strong {
-    font-weight: 700; }
+    font-weight: 400; }
   .fontset caption {
     font-size: 0.875rem; }
     @media screen and (min-width: 20rem) {
@@ -703,9 +703,9 @@
   border: solid 1px #f0f0f0; }
 
 .fontset th {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Lora", serif;
   line-height: 1.25;
-  font-weight: 400; }
+  font-weight: 700; }
   .fontset th b,
   .fontset th strong {
     font-weight: 700; }
@@ -719,10 +719,10 @@
         font-size: 1rem; } }
 
 .fontset td {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Lora", serif;
   line-height: 1.25;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.875rem; }
   .fontset td b,
   .fontset td strong {
-    font-weight: 400; }
+    font-weight: 700; }

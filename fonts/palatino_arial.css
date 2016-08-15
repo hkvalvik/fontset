@@ -441,6 +441,7 @@
 
 .fontset abbr[title] {
   border-bottom: 1px dotted deeppink;
+  text-decoration: none;
   cursor: help; }
 
 .fontset b {

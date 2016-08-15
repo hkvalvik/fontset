@@ -149,7 +149,10 @@ Demo.TextToggle = function(element, options){
         },
 
         _init: function(){
-            this.element.querySelector('[data-demo-text-toggle]').onclick = this._toggle.bind(this);
+            var toggle = this.element.querySelector('[data-demo-text-toggle]');
+            if(toggle){
+                toggle.onclick = this._toggle.bind(this);
+            }
         },
 
         _toggle: function(event){
@@ -176,6 +179,7 @@ Demo.Nav = function(element, options){
         _ul: null,
 
         _init: function(){
+            if(!this.element) { return; }
             this._ul = this.element.appendChild(document.createElement('ul'));
             [].slice.call(this.options.sections).forEach(this._renderSection.bind(this));
         },

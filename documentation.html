@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fontset</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" data-demo-stylesheet href="fonts/roboto-slab_roboto.css" />
+    <link rel="stylesheet" href="http://hkvalvik.github.io/dist/index.css">
+    <link rel="stylesheet" href="demo/dist/index.min.css">
+    <script src="demo/dist/index.min.js"></script>
+    <script>
+        function init(){
+            new Demo.StyleSheet(document, {
+                stylesheets: '[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]'.split(',')
+            });
+            new Demo.TextToggle(document, {});
+            new Demo.Nav(document.querySelector('[data-demo-nav]'), {
+                sections: document.querySelectorAll('[data-demo-nav-sections] section')
+            });
+            new Demo.FontList(document.querySelector('[data-demo-font-list]'), {
+                selectedClass: 'demo-font-list-selected'
+            });
+        }
+    </script>
+</head><body onload="init()">
+
+<a href="https://github.com/hkvalvik/fontset"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+
+<main class="fontset demo">
+
+    <div class="demo-nav">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="documentation.html">
+                        Documentation
+                    </a>
+                </li>
+            </ul>
+        </nav>        <hr />
+        <nav data-demo-nav class="demo-nav-elements"></nav>
+        <button data-demo-text-toggle style="display: none">
+            More text
+        </button>
+    </div>
+    <div class="demo-content">
+        <section>
+            <h1>
+                Css <strong>font sets</strong>
+            </h1>
+            <p>
+                <strong>
+                    Just add <abbr title="Hypertext Markup Language">HTML</abbr>!
+                </strong>
+            </p>
+            <div class="demo-font-list demo-font-list--horizontal" data-demo-font-list>
+                    <button data-demo-font-list-button="cabin-sketch" __onclick="Demo.toggleFont(event, 'cabin-sketch', 'demo-font-list-selected')" class="">
+                        <img src="demo/dist/screenshots/cabin-sketch.png" alt="cabin-sketch" />
+                    </button>
+                    <button data-demo-font-list-button="droid-sans" __onclick="Demo.toggleFont(event, 'droid-sans', 'demo-font-list-selected')" class="">
+                        <img src="demo/dist/screenshots/droid-sans.png" alt="droid-sans" />
+                    </button>
+                    <button data-demo-font-list-button="droid-serif_droid-sans" __onclick="Demo.toggleFont(event, 'droid-serif_droid-sans', 'demo-font-list-selected')" class="">
+                        <img src="demo/dist/screenshots/droid-serif_droid-sans.png" alt="droid-serif_droid-sans" />
+                    </button>
+                    <button data-demo-font-list-button="lato" __onclick="Demo.toggleFont(event, 'lato', 'demo-font-list-selected')" class="">
+                        <img src="demo/dist/screenshots/lato.png" alt="lato" />
+                    </button>
+                    <button data-demo-font-list-button="open-sans" __onclick="Demo.toggleFont(event, 'open-sans', 'demo-font-list-selected')" class="">
+                        <img src="demo/dist/screenshots/open-sans.png" alt="open-sans" />
+                    </button>
+                    <button data-demo-font-list-button="palatino_arial" __onclick="Demo.toggleFont(event, 'palatino_arial', 'demo-font-list-selected')" class="">
+                        <img src="demo/dist/screenshots/palatino_arial.png" alt="palatino_arial" />
+                    </button>
+                    <button data-demo-font-list-button="playfair-display_open-sans-condensed" __onclick="Demo.toggleFont(event, 'playfair-display_open-sans-condensed', 'demo-font-list-selected')" class="">
+                        <img src="demo/dist/screenshots/playfair-display_open-sans-condensed.png" alt="playfair-display_open-sans-condensed" />
+                    </button>
+                    <button data-demo-font-list-button="poiret-one_lora" __onclick="Demo.toggleFont(event, 'poiret-one_lora', 'demo-font-list-selected')" class="">
+                        <img src="demo/dist/screenshots/poiret-one_lora.png" alt="poiret-one_lora" />
+                    </button>
+                    <button data-demo-font-list-button="roboto-slab" __onclick="Demo.toggleFont(event, 'roboto-slab', 'demo-font-list-selected')" class="">
+                        <img src="demo/dist/screenshots/roboto-slab.png" alt="roboto-slab" />
+                    </button>
+                    <button data-demo-font-list-button="roboto-slab_roboto" __onclick="Demo.toggleFont(event, 'roboto-slab_roboto', 'demo-font-list-selected')" class="demo-font-list-selected">
+                        <img src="demo/dist/screenshots/roboto-slab_roboto.png" alt="roboto-slab_roboto" />
+                    </button>
+                    <button data-demo-font-list-button="roboto" __onclick="Demo.toggleFont(event, 'roboto', 'demo-font-list-selected')" class="">
+                        <img src="demo/dist/screenshots/roboto.png" alt="roboto" />
+                    </button>
+            </div>            <section>
+                <h2>Getting started</h2>
+                <pre><code>npm install fontset --save</code></pre>
+                <h3>
+                    <strong>scss</strong> examples
+                </h3>
+                <h4>Use included fonts</h4>
+                <pre><code>// Override default settings here
+
+@import 'node_modules/fontset/fonts/<script>
+    document.write(Demo.getFontName());
+</script>.scss'; // See all <a href="https://github.com/hkvalvik/fontset/tree/master/fonts">scss font sets</a>
+
+.my-selector {
+    @include fontset;
+}</code></pre>
+                <h4>Use other fonts</h4>
+                <pre><code>// Import fonts with css @font-face or from a third party such as Google Fonts
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400,500');
+
+// Define font families and font weights
+
+$fontset-primary-family: 'Roboto Slab', sans-serif;
+$fontset-primary-weight: 400;
+$fontset-secondary-family: 'Roboto', sans-serif;
+$fontset-secondary-weight: 300;
+$fontset-secondary-weight-bold: 400;
+
+@import 'node_modules/fontset/fonts/index.scss';
+
+.my-selector {
+    @include fontset;
+}</code></pre>
+                <h2><strong>scss</strong> settings</h2>
+                <details>
+                    <summary>See all default settings</summary>
+                    <p>
+                        Note: The syntax highlighting below is rendered using
+                        <a href="https://highlightjs.org" target="_blank">highlight.js</a>.
+                    </p>
+                    <pre class="hljs"><code><span class="hljs-comment"><span class="demo-hljs-heading"> General </span></span>
+
+
+
+<span class="hljs-comment">// Font families</span>
+
+<span class="hljs-variable">$fontset-primary-family</span>: null !default;
+<span class="hljs-variable">$fontset-primary-weight</span>: bold !default;
+<span class="hljs-variable">$fontset-secondary-family</span>: <span class="hljs-variable">$fontset-primary-family</span> !default;
+<span class="hljs-variable">$fontset-secondary-weight</span>: normal !default;
+<span class="hljs-variable">$fontset-secondary-weight-bold</span>: bold !default;
+<span class="hljs-variable">$fontset-family-monospace</span>: <span class="hljs-string">"Lucida Sans Typewriter"</span>, <span class="hljs-string">"Lucida Console"</span>, monaco, <span class="hljs-string">"Bitstream Vera Sans Mono"</span>, monospace !default;
+
+<span class="hljs-comment">// Colors</span>
+
+<span class="hljs-variable">$fontset-color-primary</span>: deeppink !default;
+<span class="hljs-variable">$fontset-color-primary-contrast</span>: <span class="hljs-number">#fff</span> !default;
+<span class="hljs-variable">$fontset-color-secondary</span>: <span class="hljs-number">#f0f0f0</span>;
+<span class="hljs-variable">$fontset-color-secondary-contrast</span>: <span class="hljs-number">#404040</span>;
+
+<span class="hljs-comment">// Indentation for blockquotes, lists, e.t.c.</span>
+
+<span class="hljs-variable">$fontset-indent</span>: <span class="hljs-number">14</span> <span class="hljs-number">28</span> !default;
+
+
+
+<span class="hljs-comment"><span class="demo-hljs-heading"> Responsive </span></span>
+
+
+
+<span class="hljs-comment">// The minimum and maximum width of the page content.</span>
+<span class="hljs-comment">// These values will prevent properties with vw units from getting too small or too large.</span>
+
+<span class="hljs-variable">$fontset-min-width</span>: <span class="hljs-number">320px</span> !default;
+<span class="hljs-variable">$fontset-max-width</span>: <span class="hljs-number">1200px</span> !default;
+
+<span class="hljs-comment">// Bottom margins for paragraphs, tables and other block elements.</span>
+<span class="hljs-comment">// The first value is rendered on screens narrower than $fontset-min-width</span>
+<span class="hljs-comment">// The second value is rendered on screens wider than $fontset-max-width</span>
+
+<span class="hljs-variable">$fontset-block-margin-bottom</span>: <span class="hljs-number">14</span> <span class="hljs-number">28</span> !default;
+
+<span class="hljs-comment">// If $fontset-unit is rem, this value should be equal to to the font-size of &lt;html&gt;.</span>
+<span class="hljs-variable">$fontset-rem-base</span>: <span class="hljs-number">16</span> !default;
+
+
+
+<span class="hljs-comment"><span class="demo-hljs-heading"> Elements </span></span>
+
+<span class="hljs-comment">// Font sizes containing two values will be scaled responsively.</span>
+<span class="hljs-comment">// Modular scale:</span>
+<span class="hljs-comment">//   Narrow screens: 16px, Minor Third 1.200</span>
+<span class="hljs-comment">//   Wide screens:   14px, Perfect fourth 1.333</span>
+
+<span class="hljs-variable">$fontset-elements</span>: (
+
+// html-    font-         font-         line-   font-             font-
+// element  family        size          height  weight            style
+
+a:          null          null          null    null              null,
+abbr:       null          null          null    null              null,
+address:    secondary     <span class="hljs-number">14</span>            <span class="hljs-number">1.5</span>     secondary-bold    normal,
+blockquote: secondary    (<span class="hljs-number">14</span>,    <span class="hljs-number">16</span>)    <span class="hljs-number">1.75</span>    secondary         null,
+button:     secondary    (<span class="hljs-number">14</span>,    <span class="hljs-number">16</span>)    <span class="hljs-number">1.25</span>    secondary-bold    null,
+dt:         secondary    (<span class="hljs-number">14</span>,    <span class="hljs-number">16</span>)    <span class="hljs-number">1.5</span>     secondary-bold    null,
+dd:         secondary    (<span class="hljs-number">14</span>,    <span class="hljs-number">16</span>)    <span class="hljs-number">1.5</span>     secondary         null,
+figcaption: secondary    (<span class="hljs-number">14</span>,    <span class="hljs-number">14</span>)    <span class="hljs-number">1.5</span>     secondary-bold    null,
+h1:         primary      (<span class="hljs-number">29.03</span>, <span class="hljs-number">50.52</span>) <span class="hljs-number">1</span>       primary           null,
+h2:         primary      (<span class="hljs-number">24.19</span>, <span class="hljs-number">37.9</span>)  <span class="hljs-number">1.25</span>    primary           null,
+h3:         primary      (<span class="hljs-number">20.16</span>, <span class="hljs-number">28.43</span>) <span class="hljs-number">1.25</span>    primary           null,
+h4:         primary      (<span class="hljs-number">16.8</span>,  <span class="hljs-number">21.33</span>) <span class="hljs-number">1.25</span>    primary           null,
+h5:         primary      (<span class="hljs-number">14</span>,    <span class="hljs-number">16</span>)    <span class="hljs-number">1.25</span>    primary           null,
+h6:         primary      (<span class="hljs-number">11.67</span>, <span class="hljs-number">12</span>)    <span class="hljs-number">1.25</span>    primary           null,
+b:          null          null          null    bolder            null,
+cite:       null          null          null    null              italic,
+code:       monospace     null          null    null              null,
+del:        null          null          null    null              null,
+em:         null          null          null    null              italic,
+i:          null          null          null    null              italic,
+ins:        null          null          null    null              null,
+mark:       null          null          null    null              null,
+nav:        secondary    (<span class="hljs-number">14</span>,    <span class="hljs-number">16</span>)    <span class="hljs-number">1.25</span>    secondary-bold    null,
+strong:     null          null          null    bolder            null,
+summary:    secondary    (<span class="hljs-number">14</span>,    <span class="hljs-number">16</span>)    <span class="hljs-number">1.5</span>     secondary-bold    null,
+li:         secondary    (<span class="hljs-number">14</span>,    <span class="hljs-number">16</span>)    <span class="hljs-number">1.25</span>    secondary         null,
+p:          secondary    (<span class="hljs-number">14</span>,    <span class="hljs-number">16</span>)    <span class="hljs-number">1.75</span>    secondary         null,
+pre:        monospace     <span class="hljs-number">14</span>            <span class="hljs-number">1.5</span>     null              null,
+caption:    primary      (<span class="hljs-number">14</span>,    <span class="hljs-number">16</span>)    <span class="hljs-number">1.25</span>    primary           null,
+th:         secondary    (<span class="hljs-number">14</span>,    <span class="hljs-number">16</span>)    <span class="hljs-number">1.25</span>    secondary-bold    null,
+td:         secondary     <span class="hljs-number">14</span>            <span class="hljs-number">1.25</span>    secondary         null
+) !default;
+
+<span class="hljs-comment">// a</span>
+
+<span class="hljs-variable">$fontset-a-transition</span>: color .<span class="hljs-number">25s</span> ease !default;
+<span class="hljs-variable">$fontset-a-color-link</span>: inherit !default;
+<span class="hljs-variable">$fontset-a-color-visited</span>: inherit !default;
+<span class="hljs-variable">$fontset-a-color-hover</span>: <span class="hljs-variable">$fontset-color-primary</span> !default;
+<span class="hljs-variable">$fontset-a-color-focus</span>: <span class="hljs-variable">$fontset-color-primary</span> !default;
+<span class="hljs-variable">$fontset-a-color-active</span>: <span class="hljs-variable">$fontset-color-primary</span> !default;
+
+<span class="hljs-comment">// abbr</span>
+
+<span class="hljs-variable">$fontset-abbr-border-bottom</span>: <span class="hljs-number">1px</span> dotted <span class="hljs-variable">$fontset-color-primary</span> !default;
+
+<span class="hljs-comment">// blockquote</span>
+
+<span class="hljs-variable">$fontset-blockquote-border-width</span>: <span class="hljs-number">2px</span> !default;
+<span class="hljs-variable">$fontset-blockquote-border-color</span>: <span class="hljs-variable">$fontset-color-secondary</span> !default;
+<span class="hljs-variable">$fontset-blockquote-indent</span>: <span class="hljs-variable">$fontset-indent</span>;
+
+<span class="hljs-comment">// button</span>
+
+<span class="hljs-variable">$fontset-button-padding</span>: .<span class="hljs-number">625em</span> <span class="hljs-number">1.25em</span> !default;
+<span class="hljs-variable">$fontset-button-color</span>: <span class="hljs-variable">$fontset-color-primary-contrast</span> !default;
+<span class="hljs-variable">$fontset-button-background-color</span>: <span class="hljs-variable">$fontset-color-primary</span> !default;
+<span class="hljs-variable">$fontset-button-disabled-color</span>: <span class="hljs-number">#eee</span> !default;
+<span class="hljs-variable">$fontset-button-disabled-background-color</span>: <span class="hljs-number">#ccc</span> !default;
+<span class="hljs-variable">$fontset-button-states</span>: shadow !default;
+
+<span class="hljs-comment">// code</span>
+
+<span class="hljs-variable">$fontset-code-color</span>: <span class="hljs-variable">$fontset-color-primary</span> !default;
+
+<span class="hljs-comment">// dl</span>
+
+<span class="hljs-variable">$dl-indent</span>: <span class="hljs-variable">$fontset-indent</span> !default;
+
+<span class="hljs-comment">// hr</span>
+
+<span class="hljs-variable">$fontset-hr-color</span>: <span class="hljs-variable">$fontset-color-primary</span> !default;
+
+<span class="hljs-comment">// lists</span>
+
+<span class="hljs-variable">$fontset-list-indent</span>: <span class="hljs-variable">$fontset-indent</span> !default;
+
+<span class="hljs-comment">// mark</span>
+
+<span class="hljs-variable">$fontset-mark-background-color</span>: <span class="hljs-variable">$fontset-color-primary</span> !default;
+<span class="hljs-variable">$fontset-mark-color</span>: <span class="hljs-variable">$fontset-color-primary-contrast</span> !default;
+
+<span class="hljs-comment">// pre</span>
+
+<span class="hljs-variable">$fontset-pre-padding</span>: <span class="hljs-number">1.25em</span> .<span class="hljs-number">625em</span> !default;
+<span class="hljs-variable">$fontset-pre-background-color</span>: <span class="hljs-variable">$fontset-color-secondary</span> !default;
+<span class="hljs-variable">$fontset-pre-color</span>: <span class="hljs-variable">$fontset-color-secondary-contrast</span> !default;
+
+<span class="hljs-comment">// table</span>
+
+<span class="hljs-variable">$fontset-table-border-color</span>: <span class="hljs-variable">$fontset-color-secondary</span> !default;
+
+
+
+<span class="hljs-comment"><span class="demo-hljs-heading"> States </span></span>
+
+<span class="hljs-variable">$fontset-states-shadow-transition</span>: box-shadow .<span class="hljs-number">25s</span> ease !default;
+
+
+
+<span class="hljs-comment"><span class="demo-hljs-heading"> Rendering </span></span>
+
+<span class="hljs-comment">// Setting this to a css selector will cause all css to be rendered immediately after importing the file.</span>
+<span class="hljs-comment">// Example: $fontset-selector: '.fontset';</span>
+<span class="hljs-comment">// If null, no css will be rendered until the fontset mixin is included.</span>
+<span class="hljs-comment">// Example: .fontset { @include fontset }</span>
+
+<span class="hljs-variable">$fontset-selector</span>: null !default;</code></pre>
+                </details>
+                <h3>
+                    <strong>Vanilla</strong> HTML / CSS
+                </h3>
+                <pre><code>&lt;link rel="stylesheet" href="node_modules/fontset/fonts/roboto-slab_roboto.css" /&gt;
+...
+&lt;div class="fontset"&gt;
+    &lt;!-- Vanilla HTML --&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+        </section>
+        <hr>
+        <section data-demo-nav-sections>
+            <h2>HTML Elements</h2>
+            <section data-demo-nav-section="Headings">
+                <h1>
+                    H1 Heading <strong>level 1</strong>
+                </h1>
+                <p>
+                    These elements represent <strong>headings</strong> for their sections.
+                    <br>
+                    Read more on <a href="https://www.w3.org/wiki/HTML/Elements/h1,_h2,_h3,_h4,_h5,_and_h6">w3.org</a>.
+                    The <code>&lt;h1&gt;</code> element has the highest rank.
+                </p>
+                <h2>
+                    H2 Heading <strong>level 2</strong>
+                </h2>
+                <p>
+                    The <code>&lt;h2&gt;</code> element has the second highest rank.
+                    <strong>Vestibulum tincidunt rhoncus</strong> suscipit. Nulla at magna elit. Ut at elementum ex, a facilisis lorem.
+                    Duis at sodales purus. <em>Duis nec commodo tellus</em>.
+                </p>
+                <h3>
+                    H3 Heading <strong>level 3</strong>
+                </h3>
+                <p>
+                    Vestibulum tincidunt rhoncus suscipit. <code>&lt;h3&gt;</code> Nulla at magna elit. Ut at elementum ex, a facilisis lorem.
+                    Duis at sodales purus. Duis nec commodo tellus. Curabitur semper metus nec pretium auctor.
+                    Integer pharetra est felis, vitae consequat nulla placerat et.
+                </p>
+                <h4>
+                    H4 Heading <strong>level 4</strong>
+                </h4>
+                <p>
+                    Vestibulum <code>&lt;h4&gt;</code> tincidunt rhoncus suscipit. Nulla at magna elit. Ut at elementum ex, a facilisis lorem.
+                    Duis at sodales purus. Duis nec commodo tellus. Curabitur semper metus nec pretium auctor.
+                    Integer pharetra est felis, vitae consequat nulla placerat et.
+                </p>
+                <h5>
+                    H5 Heading <strong>level 5</strong>
+                </h5>
+                <p>
+                    Vestibulum tincidunt rhoncus suscipit. Nulla at magna elit. <code>&lt;h5&gt;</code> Ut at elementum ex, a facilisis lorem.
+                    Duis at sodales purus. Duis nec commodo tellus. Curabitur semper metus nec pretium auctor.
+                    Integer pharetra est felis, vitae consequat nulla placerat et.
+                </p>
+                <h6>
+                    H6 Heading <strong>level 6</strong>
+                </h6>
+                <p>
+                    The <code>&lt;h6&gt;</code> element has the highest rank. Nulla at magna elit. Ut at elementum ex, a facilisis lorem.
+                    Duis at sodales purus. Duis nec commodo tellus. Curabitur semper metus nec pretium auctor.
+                    Integer pharetra est felis, vitae consequat nulla placerat et.
+                </p>
+                <h1>Heading</h1>
+                <h2>Heading</h2>
+                <h3>Heading</h3>
+                <h4>Heading</h4>
+                <h5>Heading</h5>
+                <h6>Heading</h6>            </section>
+            <section>
+                <h2>Paragraphs</h2>
+                <p>
+                    The <code>&lt;p&gt;</code> element represents a paragraph.
+                    This element <em>should not be used</em> when a more specific element is more appropriate.
+                    Read more about paragraphs on <a href="https://www.w3.org/wiki/HTML/Elements/p">w3.org</a>.
+                </p>            </section>
+            <section>
+                <h2>Anchors</h2>
+                <blockquote cite="https://www.w3.org/wiki/HTML/Elements/a">
+                    The <code>&lt;a&gt;</code> element represents a hyperlink.
+                </blockquote>
+                <p>
+                    <strong>Example:</strong>
+                    <a href="javascript:void(0)">This is a link</a>
+                </p>
+            </section>
+            <section>
+                <h2>Buttons</h2>
+                <p>
+                    <button>
+                        Button
+                    </button>
+                    <button disabled>
+                        Disabled button
+                    </button>
+                </p>
+            </section>
+            <section>
+                <h2>Horizontal break</h2>
+                <blockquote cite="https://dev.w3.org/html5/html-author/#the-hr-element">
+                    The <code>&lt;hr&gt;</code> element represents a paragraph-level thematic break, e.g. a scene change in a story,
+                    or a transition to another topic within a section of a reference book.
+                </blockquote>
+                <hr>            </section>
+            <section>
+                <h2>Inline elements</h2>
+                <h3>Common</h3>
+                <blockquote cite="https://www.w3.org/wiki/HTML/Elements/strong">
+                    <strong>
+                        The <code>&lt;strong&gt;</code> element
+                    </strong>
+                    represents strong importance for its contents.
+                </blockquote>
+                <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em">
+                    The HTML element emphasis <code>&lt;em&gt;</code> <em>marks text that has stress emphasis</em>.
+                    The em element can be nested,
+                    <em>
+                        with each level of nesting indicating
+                        <em>
+                            a greater degree of emphasis.
+                        </em>
+                    </em>
+                </blockquote>
+                <blockquote cite="https://www.w3.org/wiki/HTML/Elements/b">
+                    <b>
+                        The <code>&lt;b&gt;</code> element
+                    </b>
+                    represents a span of text to be stylistically offset from the normal prose without conveying any extra importance.
+                    according to <a href="https://www.w3.org/wiki/HTML/Elements/b">w3.org</a>.
+                </blockquote>
+                <blockquote cite="https://www.w3.org/TR/html5/text-level-semantics.html#the-i-element">
+                    The <code>&lt;i&gt;</code> element
+                    represents a span of text <i>in an alternate voice or mood</i>,
+                    or otherwise offset from <i>the normal prose</i> in a manner indicating a <i>different quality of text</i>
+                    according to <a href="https://www.w3.org/wiki/HTML/Elements/i">w3.org</a>.
+                </blockquote>
+                <h3>Inline quotes / citations</h3>
+                <p>
+                    According to <a href="https://www.w3.org/wiki/HTML/Elements/q">w3.org</a>,
+                    <q cite="https://www.w3.org/wiki/HTML/Elements/q">
+                        the <code>&lt;q&gt;</code> element represents some phrasing content quoted from another source.
+                    </q>
+                </p>
+                <p>
+                    <cite>The cite element</cite> <code>&lt;cite&gt;</code> represents the cited title of a work; for example, the title of a book mentioned within the main text flow of a document.
+                </p>
+                <h3>Code</h3>
+                <p>
+                    <a href="w3.org">w3.org</a>:
+                    <q cite="https://www.w3.org/wiki/HTML/Elements/code">
+                        The HTML Code Element <code>&lt;code&gt;</code> represents a fragment of computer code.
+                    </q>
+                </p>
+                <h3>Document edits</h3>
+                <p>
+                    By using <del>the <code>&lt;del&gt;</code> element</del>, text can be marked as deleted.
+                    <br>
+                    The <code>&lt;ins&gt;</code> element <ins>marks the text as inserted</ins>.
+                    <br>
+                    Use the <code>&lt;mark&gt;</code> element for <mark>text highlighting</mark>.
+                </p>
+                <h3>Abbreviation</h3>
+                <blockquote cite="https://www.w3.org/wiki/HTML/Elements/abbr">
+                    The <code>&lt;abbr&gt;</code> element represents an abbreviation or acronym.
+                </blockquote>
+            </section>
+            <section>
+                <h2>Blockquote</h2>
+                <blockquote cite="https://www.w3.org/wiki/HTML/Elements/blockquote">
+                    The HTML <code>&lt;blockquote&gt;</code> Element (or HTML Block Quotation Element) indicates that the enclosed text is an extended quotation.
+                </blockquote>
+            </section>
+            <section>
+                <h2>Preformatting</h2>
+                <p>
+                    The <code>&lt;pre&gt;</code> element
+                </p>
+                <pre>represents a block of preformatted text.</pre>
+            </section>
+            <section>
+                <h2>Figures</h2>
+                <figure>
+                    <img src="demo/placeholder.png" alt="An image">
+                    <figcaption>
+                        Simple example of a <code>&lt;figure&gt;</code> with a <code>&lt;figcaption&gt;</code>.
+                        <br>
+                        Read more about those elements on
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure">
+                            developer.mozilla.org
+                        </a>.
+                    </figcaption>
+                </figure>
+            </section>
+            <section>
+                <h2>Images</h2>
+                <p>
+                    <code>&lt;img&gt;</code> tags
+                </p>
+                <img src="demo/placeholder.png" alt="An image">            </section>
+            <section>
+                <h2>Navigations</h2>
+                <blockquote cite="https://developer.mozilla.org/en/docs/Web/HTML/Element/nav">
+                    The HTML <code>&lt;nav&gt;</code> element (HTML Navigation Element)
+                    represents a section of a page that links to other pages or to parts within the page: a section with navigation links.
+                </blockquote>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li>
+                            <a href="#">Our projects</a>
+                            <ul>
+                                <li><a href="#">Project one</a></li>
+                                <li><a href="#">Project two</a></li>
+                                <li><a href="#">Project three</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">What we do</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">About us</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section>
+                <h2>Tables</h2>
+                <p>
+                    <code>&lt;table&gt;</code>,
+                    <code>&lt;caption&gt;</code>,
+                    <code>&lt;thead&gt;</code>,
+                    <code>&lt;tbody&gt;</code>,
+                    <code>&lt;tfoot&gt;</code>,
+                    <code>&lt;tr&gt;</code>,
+                    <code>&lt;th&gt;</code> and
+                    <code>&lt;td&gt;</code>
+                </p>
+                <table>
+                    <caption>Table caption</caption>
+                    <thead>
+                    <tr>
+                        <th>
+                            <b>Heading one</b>
+                        </th>
+                        <th>Heading two</th>
+                        <th>Heading three</th>
+                        <th>Heading four</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Column one</td>
+                        <td>Column two</td>
+                        <td>Column three</td>
+                        <td>Column four</td>
+                    </tr>
+                    <tr>
+                        <td>Column one</td>
+                        <td>Column two</td>
+                        <td>Column three</td>
+                        <td>Column four</td>
+                    </tr>
+                    <tr>
+                        <td>Column one</td>
+                        <td>Column two</td>
+                        <td>Column three</td>
+                        <td>Column four</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Heading one</th>
+                        <th colspan="2">
+                            <strong>Heading</strong> two
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Vestibulum tincidunt rhoncus suscipit. Nulla at magna elit. Ut at elementum ex, a facilisis lorem.</td>
+                        <td>Duis at sodales purus. Duis nec commodo tellus.</td>
+                        <td>Duis at sodales purus. Duis nec commodo tellus. Curabitur semper metus nec pretium auctor.</td>
+                    </tr>
+                    <tr>
+                        <td>Duis at sodales purus. Duis nec commodo tellus.</td>
+                        <td>Vestibulum tincidunt rhoncus suscipit. Nulla at magna elit. Ut at elementum ex, a facilisis lorem.</td>
+                        <td>Duis at sodales purus. Duis nec commodo tellus.</td>
+                    </tr>
+                    </tbody>
+                </table>            </section>
+            <section>
+                <h2>Lists</h2>
+                <p>
+                    <code>&lt;ul&gt;</code>,
+                    <code>&lt;ol&gt;</code> and
+                    <code>&lt;li&gt;</code>
+                </p>
+                <h3>Unordered lists</h3>
+                <ul>
+                    <li>List item one</li>
+                    <li>List item two</li>
+                    <li>
+                        List item three
+                        <ul>
+                            <li>List item three A</li>
+                            <li>List item three B</li>
+                            <li>List item three C</li>
+                        </ul>
+                    </li>
+                    <li>
+                        List item four
+                        <br>
+                        Second line
+                    </li>
+                </ul>
+                <h3>Ordered lists</h3>
+                <ol>
+                    <li>List item one</li>
+                    <li>List item two</li>
+                    <li>
+                        List item three
+                        <ol>
+                            <li>List item three A</li>
+                            <li>List item three B</li>
+                            <li>List item three C</li>
+                        </ol>
+                    </li>
+                    <li>
+                        List item four
+                        <br>
+                        Second line
+                    </li>
+                </ol>            </section>
+            <section>
+                <h2>Datalist</h2>
+                <p>
+                    <code>&lt;dl&gt;</code>,
+                    <code>&lt;dt&gt;</code> and
+                    <code>&lt;dd&gt;</code>
+                </p>
+                <dl>
+                    <dt>Term</dt>
+                    <dd>Definition ipsum dolor sit amet</dd>
+                    <dd>Lorem ipsum dolor sit amet</dd>
+                    <dd>Pretium nec scelerisque</dd>
+                    <dt>Another term</dt>
+                    <dd>Another definition</dd>
+                    <dt>Lorem ipsum</dt>
+                    <dt>Dolor sit amet</dt>
+                    <dt>Pretium scelerisque</dt>
+                    <dd>Morbi congue ullamcorper sapien</dd>
+                </dl>            </section>
+            <section>
+                <h2>Address</h2>
+                <blockquote cite="https://www.w3.org/wiki/HTML/Elements/address">
+                    The <code>&lt;address&gt;</code> element represents the contact information for its nearest article or body element ancestor.
+                </blockquote>
+                <address>
+                    My address
+                    <br>
+                    1234 City, Country
+                    <br>
+                    Phone: <a href="#">00011222</a>
+                    <br>
+                    E-mail: <a href="#">email@email.org</a>
+                </address>            </section>
+            <section>
+                <h2>Details</h2>
+                <p>
+                    Not supported by all browsers, see
+                    <a href="http://caniuse.com/#feat=details" target="_blank">
+                        caniuse.com/#feat=details
+                    </a>
+                </p>
+                <details>
+                    <summary>
+                        This is a <code>&lt;summary&gt;</code> element
+                    </summary>
+                    <p>
+                        Details
+                    </p>
+                </details>
+            </section>
+        </section>
+    </div>
+</main>
+
+<script src="http://hkvalvik.github.io/dist/index.min.js"></script>
+
+</body>
+</html>

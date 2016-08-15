@@ -1,0 +1,7 @@
+<div class="demo-font-list demo-font-list--{{cssModifier}}" data-demo-font-list>
+    {{#each fonts}}
+        <button data-demo-font-list-button="{{name}}" __onclick="Demo.toggleFont(event, '{{name}}', '{{../selectedButtonClass}}')" class="{{buttonClass}}">
+            <img src="{{../screenshotsPath}}/{{name}}.png" alt="{{name}}" />
+        </button>
+    {{/each}}
+</div>

@@ -1,0 +1,23 @@
+<head>
+    <title>Fontset</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" data-demo-stylesheet href="{{fontsPath}}/{{selectedFont}}.css" />
+    <link rel="stylesheet" href="http://hkvalvik.github.io/dist/index.css">
+    <link rel="stylesheet" href="demo/dist/index.min.css">
+    <script src="demo/dist/index.min.js"></script>
+    <script>
+        function init(){
+            new Demo.StyleSheet(document, {
+                stylesheets: '{{fonts}}'.split(',')
+            });
+            new Demo.TextToggle(document, {});
+            new Demo.Nav(document.querySelector('[data-demo-nav]'), {
+                sections: document.querySelectorAll('[data-demo-nav-sections] section')
+            });
+            new Demo.FontList(document.querySelector('[data-demo-font-list]'), {
+                selectedClass: '{{selectedButtonClass}}'
+            });
+        }
+    </script>
+</head>
