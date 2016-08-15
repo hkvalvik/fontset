@@ -1,7 +1,7 @@
 {
   "name": "fontset",
   "version": "0.3.0",
-  "description": "Configurable, responsive typography sets. Just add HTML!",
+  "description": "Responsive typography sets, works with any HTML. Configurable with Sass.",
   "keywords": ["typography", "type", "font", "fonts", "sass", "scss", "responsive", "semantic"],
   "main": "gulpfile.js",
   "author": "",
