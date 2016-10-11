@@ -11,7 +11,7 @@
     <script>
         function init(){
             new Demo.StyleSheet(document, {
-                stylesheets: '[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]'.split(',')
+                stylesheets: '[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]'.split(',')
             });
             new Demo.TextToggle(document, {});
             new Demo.Nav(document.querySelector('[data-demo-nav]'), {
@@ -69,6 +69,15 @@
                     </button>
                     <button data-demo-font-list-button="lato" __onclick="Demo.toggleFont(event, 'lato', 'demo-font-list-selected')" class="">
                         <img src="demo/dist/screenshots/lato.png" alt="lato" />
+                    </button>
+                    <button data-demo-font-list-button="noto-sans" __onclick="Demo.toggleFont(event, 'noto-sans', 'demo-font-list-selected')" class="">
+                        <img src="demo/dist/screenshots/noto-sans.png" alt="noto-sans" />
+                    </button>
+                    <button data-demo-font-list-button="noto-serif" __onclick="Demo.toggleFont(event, 'noto-serif', 'demo-font-list-selected')" class="">
+                        <img src="demo/dist/screenshots/noto-serif.png" alt="noto-serif" />
+                    </button>
+                    <button data-demo-font-list-button="noto-serif_noto-sans" __onclick="Demo.toggleFont(event, 'noto-serif_noto-sans', 'demo-font-list-selected')" class="">
+                        <img src="demo/dist/screenshots/noto-serif_noto-sans.png" alt="noto-serif_noto-sans" />
                     </button>
                     <button data-demo-font-list-button="open-sans" __onclick="Demo.toggleFont(event, 'open-sans', 'demo-font-list-selected')" class="">
                         <img src="demo/dist/screenshots/open-sans.png" alt="open-sans" />
