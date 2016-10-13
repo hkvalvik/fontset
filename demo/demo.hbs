@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+{{> head}}
+<body onload="init()">
+
+{{> github-ribbon}}
+
+<main class="fontset demo">
+
+    <div class="demo-nav">
+        {{> site-nav}}
+        <hr />
+        <nav data-demo-nav class="demo-nav-elements"></nav>
+        <button data-demo-text-toggle style="display: none">
+            More text
+        </button>
+    </div>
+    <div class="demo-content">
+        <section data-demo-nav-sections>
+            <h1>Demo</h1>
+            <p>
+                <strong>Resize the screen</strong>
+                <br>
+                to see headings and other elements scale.
+            </p>
+            <hr>
+            <p>
+                <strong>Included font-families:</strong>
+            </p>
+            {{> font-list cssModifier="horizontal"}}
+            <hr>
+            <section data-demo-nav-section="Headings">
+                {{> headings/index}}
+            </section>
+            <section>
+                {{> p/index}}
+            </section>
+            <section>
+                {{> a/index}}
+            </section>
+            <section>
+                {{> button/index}}
+            </section>
+            <section>
+                {{> hr/index}}
+            </section>
+            <section>
+                {{> inline/index}}
+            </section>
+            <section>
+                {{> blockquote/index}}
+            </section>
+            <section>
+                {{> pre/index}}
+            </section>
+            <section>
+                {{> figure/index}}
+            </section>
+            <section>
+                {{> img/index}}
+            </section>
+            <section>
+                {{> nav/index}}
+            </section>
+            <section>
+                {{> table/index}}
+            </section>
+            <section>
+                {{> lists/index}}
+            </section>
+            <section>
+                {{> dl/index}}
+            </section>
+            <section>
+                {{> address/index}}
+            </section>
+            <section>
+                {{> details/index}}
+            </section>
+        </section>
+    </div>
+</main>
+
+<script src="http://hkvalvik.github.io/dist/index.min.js"></script>
+
+</body>
+</html>

@@ -25,7 +25,8 @@ module.exports = function(gulp){
 
         return gulp.src([
                 'demo/index.hbs',
-                'demo/documentation.hbs'
+                'demo/documentation.hbs',
+                'demo/demo.hbs'
             ])
             .pipe(
                 handlebars({
